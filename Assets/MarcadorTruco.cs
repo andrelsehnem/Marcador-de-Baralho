@@ -1,11 +1,14 @@
-using UnityEngine;
+using System;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class MarcadorTruco : MonoBehaviour
 {
     public TextMeshProUGUI pontosTimeA;
     public TextMeshProUGUI pontosTimeB;
+    public ConfirmationDialog confirmationDialog;
 
     private int scoreA = 0;
     private int scoreB = 0;
@@ -40,6 +43,7 @@ public class MarcadorTruco : MonoBehaviour
 
     public void Resetar()
     {
+        GameObject gameObject = GameObject.Find("ConfirmaReset");
         scoreA = 0;
         scoreB = 0;
         AtualizarPlacar();
@@ -50,4 +54,29 @@ public class MarcadorTruco : MonoBehaviour
         pontosTimeA.text = scoreA.ToString();
         pontosTimeB.text = scoreB.ToString();
     }
+
+    public void PedirConfirmacaoReset()
+    {
+        if (confirmationDialog == null)
+        {
+            // fallback: sem diálogo, apenas resetar
+            Resetar();
+            return;
+        }
+
+        confirmationDialog.Show("Tem certeza que deseja zerar o placar?", (bool confirmed) =>
+        {
+            if (confirmed)
+            {
+                Resetar();
+            }
+            else
+            {
+                // opcional: fazer algo quando cancelado
+                Debug.Log("Reset cancelado pelo usuário.");
+            }
+        });
+    }
+
+
 }
