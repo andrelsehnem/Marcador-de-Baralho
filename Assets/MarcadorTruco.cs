@@ -8,37 +8,63 @@ public class MarcadorTruco : MonoBehaviour
 {
     public TextMeshProUGUI pontosTimeA;
     public TextMeshProUGUI pontosTimeB;
+    public TextMeshProUGUI WinnerA;
+    public TextMeshProUGUI WinnerB;
     public ConfirmationDialog confirmationDialog;
 
     private int scoreA = 0;
     private int scoreB = 0;
 
-    public void SomarA()
+    public void OperacaoA(bool somar, int valor)
     {
-        if (scoreA < 12)
-            scoreA++;
+        if (scoreB >= 12) return;
+        if (scoreA >= 12) return;
+
+        if (scoreA < 12 && somar)
+            scoreA += valor;
+        else if (scoreA > 0 && !somar)
+            scoreA -= valor;
+
+        if(scoreA > 12)
+            scoreA = 12;
+
         AtualizarPlacar();
     }
 
-    public void SubtrairA()
+    public void OperacaoB(bool somar, int valor)
     {
-        if (scoreA > 0)
-            scoreA--;
+        if (scoreA >= 12) return;
+        if (scoreB >= 12) return;
+
+        if (scoreB < 12 && somar)
+            scoreB += valor;
+        else if (scoreB > 0 && !somar)
+            scoreB -= valor;
+
+        if (scoreB > 12)
+            scoreB = 12;
+
         AtualizarPlacar();
     }
 
-    public void SomarB()
+    public void SomarA(int valor)
     {
-        if (scoreB < 12)
-            scoreB++;
-        AtualizarPlacar();
+        OperacaoA(true, valor);
     }
 
-    public void SubtrairB()
+    public void SubtrairA(int valor)
     {
-        if (scoreB > 0)
-            scoreB--;
-        AtualizarPlacar();
+        OperacaoA(false, valor);
+    }
+
+    public void SomarB(int valor)
+    {
+        OperacaoB(true, valor);
+    }
+
+    public void SubtrairB(int valor)
+    {
+        OperacaoB(false, valor);
     }
 
     public void Resetar()
@@ -49,10 +75,28 @@ public class MarcadorTruco : MonoBehaviour
         AtualizarPlacar();
     }
 
-    void AtualizarPlacar()
+    public void AtualizarPlacar()
     {
         pontosTimeA.text = scoreA.ToString();
         pontosTimeB.text = scoreB.ToString();
+
+        if(scoreA >= 12)
+        {
+            WinnerA.text = "VENCEDOR";
+        }
+        else
+        {
+            WinnerA.text = "";
+        } 
+        
+        if(scoreB >= 12)
+        {
+            WinnerB.text = "VENCEDOR";
+        }
+        else
+        {
+            WinnerB.text = "";
+        }
     }
 
     public void PedirConfirmacaoReset()
