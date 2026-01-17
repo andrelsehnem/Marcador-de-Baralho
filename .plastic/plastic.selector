@@ -1,4 +1,0 @@
-repository "Marcador-de-Baralho/Marcador-de-Baralho@4673212388799@cloud"
-  path "/"
-    br "/main"
-    co "/main"

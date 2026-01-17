@@ -1,2 +1,0 @@
-# Marcador-de-Baralho
-
