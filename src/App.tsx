@@ -4,6 +4,7 @@ import { ThemeProvider } from './shared/contexts/ThemeContext';
 import ListaJogos from './web/pages/ListaJogos/ListaJogos';
 import Landing from './web/pages/Landing/Landing';
 import Cacheta from './web/pages/Cacheta/Cacheta';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('landing');
@@ -35,6 +36,7 @@ export default function App() {
         {currentPage === 'listajogos' && <ListaJogos onNavigate={navigateTo} />}
         {currentPage === 'cacheta' && <Cacheta onBack={() => navigateTo('listajogos')} />}
       </ThemeProvider>
+      <Analytics />
     </div>
   );
 }
