@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
-import './Home.css';
-import Button from '../../shared/components/Button';
-import { useTheme } from '../../shared/contexts/ThemeContext';
-import { useThemeStyles } from '../../shared/hooks/useThemeStyles';
-import { useResponsive } from '../../shared/hooks/useResponsive';
-import Cacheta from './Cacheta';
+import React from 'react';
+import './ListaJogos.css';
+import Button from '../../../shared/components/Button';
+import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
+import { useThemeStyles } from '../../../shared/hooks/useThemeStyles';
+import { useResponsive } from '../../../shared/hooks/useResponsive';
 
-const Home: React.FC = () => {
-  const [showCacheta, setShowCacheta] = useState(false);
-  const { toggleTheme, theme } = useTheme();
+const ListaJogos: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }) => {
   const themeStyles = useThemeStyles();
   const responsive = useResponsive();
-
-  if (showCacheta) {
-    return <Cacheta onBack={() => setShowCacheta(false)} />;
-  }
 
   return (
     <div
@@ -24,6 +17,7 @@ const Home: React.FC = () => {
         color: themeStyles.textPrimary,
       }}
     >
+      <ThemeToggle />
       <div className="home-content">
         <h1 className="home-title" style={{ color: themeStyles.textPrimary }}>
           Marcador de baralho
@@ -44,18 +38,8 @@ const Home: React.FC = () => {
             text={responsive.isMobile ? 'Cacheta' : 'Cacheta'}
             backgroundColor={themeStyles.buttonPrimaryAlt.bg}
             textColor={themeStyles.buttonPrimaryAlt.text}
-            onClick={() => setShowCacheta(true)}
+            onClick={() => onNavigate('cacheta')}
             className="button-secondary"
-            borderColor={themeStyles.buttonSecondary.border}
-            borderWidth={themeStyles.buttonSecondary.borderWidth}
-          />
-
-          <Button
-            text={`${theme === 'dark' ? '☀️' : '🌙'}`}
-            backgroundColor={themeStyles.buttonSecondary.bg}
-            textColor={themeStyles.buttonSecondary.text}
-            onClick={toggleTheme}
-            className="button-theme"
             borderColor={themeStyles.buttonSecondary.border}
             borderWidth={themeStyles.buttonSecondary.borderWidth}
           />
@@ -65,4 +49,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default ListaJogos;
