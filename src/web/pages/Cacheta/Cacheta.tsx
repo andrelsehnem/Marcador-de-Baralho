@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Cacheta.css';
-import { useThemeStyles } from '../../shared/hooks/useThemeStyles';
+import { useThemeStyles } from '../../../shared/hooks/useThemeStyles';
+import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
 
 interface Player {
     id: number;
@@ -16,6 +17,7 @@ const Cacheta: React.FC<{ onBack: () => void }> = ({ onBack }) => {
     ]);
     const [editingId, setEditingId] = useState<number | null>(null);
     const [editingName, setEditingName] = useState<string>('');
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
     // Carrega os dados do localStorage ao montar o componente
     useEffect(() => {
@@ -80,13 +82,101 @@ const Cacheta: React.FC<{ onBack: () => void }> = ({ onBack }) => {
             className="cacheta-container"
             style={{ backgroundColor: themeStyles.containerBg }}
         >
+            <ThemeToggle />
+            
+            {/* Sidebar */}
+            <div 
+                className={`cacheta-sidebar ${sidebarOpen ? 'open' : ''}`}
+                style={{ backgroundColor: themeStyles.buttonPrimary.bg }}
+            >
+                <div className="sidebar-header">
+                    <h2 style={{ color: themeStyles.buttonPrimary.text }}>Menu</h2>
+                    <button
+                        className="sidebar-close"
+                        onClick={() => setSidebarOpen(false)}
+                        style={{ color: themeStyles.buttonPrimary.text }}
+                    >
+                        ✕
+                    </button>
+                </div>
+                <div className="sidebar-content">
+                    <button
+                        className="sidebar-button"
+                        onClick={() => {
+                            onBack();
+                            setSidebarOpen(false);
+                        }}
+                        style={{ 
+                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                            color: themeStyles.buttonPrimary.text 
+                        }}
+                    >
+                        <span className="sidebar-button-icon">←</span>
+                        <span>Voltar</span>
+                    </button>
+                    <button
+                        className="sidebar-button"
+                        onClick={() => {
+                            addPlayer();
+                            setSidebarOpen(false);
+                        }}
+                        style={{ 
+                            backgroundColor: themeStyles.buttonPrimaryAlt.bg,
+                            color: '#ffffff'
+                        }}
+                    >
+                        <span className="sidebar-button-icon">+</span>
+                        <span>Adicionar Jogador</span>
+                    </button>
+                    <button
+                        className="sidebar-button"
+                        onClick={() => {
+                            resetGame();
+                            setSidebarOpen(false);
+                        }}
+                        style={{ 
+                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                            color: themeStyles.buttonPrimary.text 
+                        }}
+                    >
+                        <span className="sidebar-button-icon">🔄</span>
+                        <span>Zerar Placar</span>
+                    </button>
+                    <button
+                        className="sidebar-button"
+                        onClick={() => {
+                            resetPlayers();
+                            setSidebarOpen(false);
+                        }}
+                        style={{ 
+                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                            color: themeStyles.buttonPrimary.text 
+                        }}
+                    >
+                        <span className="sidebar-button-icon">🔃</span>
+                        <span>Reiniciar Jogo</span>
+                    </button>
+                </div>
+            </div>
+
+            {/* Overlay */}
+            {sidebarOpen && (
+                <div 
+                    className="sidebar-overlay"
+                    onClick={() => setSidebarOpen(false)}
+                />
+            )}
+
+            {/* Header */}
             <div className="cacheta-header" style={{ backgroundColor: themeStyles.buttonPrimary.bg }}>
                 <button
-                    className="back-button"
-                    onClick={onBack}
+                    className="burger-button"
+                    onClick={() => setSidebarOpen(true)}
                     style={{ color: themeStyles.buttonPrimary.text }}
                 >
-                    ← Voltar
+                    <div className="burger-line"></div>
+                    <div className="burger-line"></div>
+                    <div className="burger-line"></div>
                 </button>
                 <h1
                     className="cacheta-title"
@@ -94,35 +184,6 @@ const Cacheta: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                 >
                     Cacheta
                 </h1>
-
-                <div className="header-buttons">
-
-                    <button
-                        className="reset-button"
-                        onClick={addPlayer}
-                        style={{ backgroundColor: themeStyles.buttonPrimaryAlt.bg }}
-                    >
-                        + Adicionar Jogador
-                    </button>
-
-                    <button
-                        className="reset-button"
-                        onClick={resetGame}
-                        style={{ color: themeStyles.buttonPrimary.text }}
-                        title="Resetar placar"
-                    >
-                        Resetar
-                    </button>
-                    <button
-                        className="reset-button"
-                        onClick={resetPlayers}
-                        style={{ color: themeStyles.buttonPrimary.text }}
-                        title="Resetar jogadores"
-                    >
-                        Reset Jogadores
-                    </button>
-                </div>
-
             </div>
 
             <div className="cacheta-scoreboard">

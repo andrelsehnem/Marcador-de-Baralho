@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Home from '../Home';
 import './Landing.css';
+import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
 
-const LandingPage = () => {
-  const [showHome, setShowHome] = useState(false);
+const LandingPage = ({ onNavigate }: { onNavigate: (page: string) => void }) => {
   const [stars, setStars] = useState([]);
 
   useEffect(() => {
@@ -19,12 +18,9 @@ const LandingPage = () => {
     setStars(newStars);
   }, []);
 
-  if (showHome) {
-    return <Home />;
-  }
-
   return (
     <div className="landing-page">
+     
       {/* Stars */}
       <div className="stars">
         {stars.map(star => (
@@ -65,22 +61,46 @@ const LandingPage = () => {
 
         {/* CTA Section */}
         <div className="cta">
-          <CTACard
-            icon="🌐"
-            title="Jogar Online"
-            description="Acesse agora e escolha entre diversos jogos de baralho. Marque pontos, salve partidas e divirta-se!"
-            buttonText="Acessar Jogos"
-            buttonStyle={{ background: 'white', color: '#667eea' }}
-            onClick={() => setShowHome(true)}
-          />
+          <div className="cta-card">
+            <div className="cta-card-header">
+              <span className="cta-card-icon">🌐</span>
+              <h2 className="cta-card-title">Jogar Online</h2>
+            </div>
+            <p className="cta-card-description">
+              <br />
+              Acesse agora e escolha entre diversos jogos de baralho. Marque pontos, salve partidas e divirta-se!
+              <br />
+            </p>
+            <div className="game-buttons">
+              <button 
+                className="game-button cacheta-btn"
+                onClick={() => onNavigate('cacheta')}
+              >
+                🃏 Cacheta
+              </button>
+              <button 
+                className="game-button truco-btn"
+                onClick={() => onNavigate('listajogos')}
+              >
+                🎯 Truco
+              </button>
+              <button 
+                className="game-button full-list-btn"
+                onClick={() => onNavigate('listajogos')}
+              >
+                📋 Acessar lista completa
+              </button>
+            </div>
+          </div>
 
           <CTACard
             icon="📱"
-            title="Baixar App"
-            description="Leve seus jogos para qualquer lugar! Baixe nosso app e jogue offline quando quiser."
-            buttonText="Em breve..."
+            title="Aplicativo Android"
+            description="Leve seus jogos para qualquer lugar! Baixe nosso app e jogue offline quando quiser.
+              Aplicativo em desenvolvimento, disponível na Google Play Store."
+            buttonText="Abrir na Play Store"
             buttonStyle={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', color: 'white' }}
-            onClick={() => {}}
+            onClick={() => window.open('https://play.google.com/store/apps/details?id=dev.andre100.marcadorPontos', '_blank')}
           />
         </div>
 
@@ -104,9 +124,11 @@ const LandingPage = () => {
 const CTACard = ({ icon, title, description, buttonText, buttonStyle, onClick }) => {
   return (
     <div className="cta-card" onClick={onClick}>
-      <span className="cta-card-icon">{icon}</span>
-      <h2 className="cta-card-title">{title}</h2>
-      <p className="cta-card-description">{description}</p>
+      <div className="cta-card-header">
+        <span className="cta-card-icon">{icon}</span>
+        <h2 className="cta-card-title">{title}</h2>
+      </div>
+      <p className="cta-card-description"><br />{description}<br /></p>
       <button className="cta-button" style={buttonStyle}>{buttonText}</button>
     </div>
   );
