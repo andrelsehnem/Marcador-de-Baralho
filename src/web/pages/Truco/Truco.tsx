@@ -3,8 +3,9 @@ import { RotateCcw, Menu, Clock, ArrowLeft } from 'lucide-react';
 import './Truco.css';
 import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
 import { useTheme } from '../../../shared/contexts/ThemeContext';
+import AdSense from '../../../shared/components/AdSense/AdSense';
 
-export default function TrucoPaulista() {
+export default function TrucoPaulista({ onBack }: { onBack: () => void }) {
     const { theme } = useTheme();
     const [nosScore, setNosScore] = useState(() => {
         const saved = localStorage.getItem('truco-nosScore');
@@ -85,6 +86,9 @@ export default function TrucoPaulista() {
             </div>
 
             <ThemeToggle />
+
+            {/* AdSense */}
+            <AdSense />
 
             {/* Score Cards */}
             <div className="truco-score-section">

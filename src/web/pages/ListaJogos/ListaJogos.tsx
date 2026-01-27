@@ -4,6 +4,7 @@ import Button from '../../../shared/components/Button';
 import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
 import { useThemeStyles } from '../../../shared/hooks/useThemeStyles';
 import { useResponsive } from '../../../shared/hooks/useResponsive';
+import AdSense from '../../../shared/components/AdSense/AdSense';
 
 const ListaJogos: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }) => {
   const themeStyles = useThemeStyles();
@@ -25,6 +26,9 @@ const ListaJogos: React.FC<{ onNavigate: (page: string) => void }> = ({ onNaviga
         <p className="home-subtitle" style={{ color: themeStyles.textSecondary }}>
           Acompanhe suas mãos e jogadas com facilidade!
         </p>
+
+        {/* AdSense */}
+        <AdSense />
 
         <div className="button-container">
           <Button
