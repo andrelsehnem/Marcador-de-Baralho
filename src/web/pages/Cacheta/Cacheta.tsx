@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Cacheta.css';
 import { useThemeStyles } from '../../../shared/hooks/useThemeStyles';
 import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
+import AdSense from '../../../shared/components/AdSense/AdSense';
 
 interface Player {
     id: number;
@@ -185,6 +186,9 @@ const Cacheta: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                     Cacheta
                 </h1>
             </div>
+
+            {/* AdSense */}
+            <AdSense />
 
             <div className="cacheta-scoreboard">
                 {players.map(player => (

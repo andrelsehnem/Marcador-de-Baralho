@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Landing.css';
 import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
+import AdSense from '../../../shared/components/AdSense/AdSense';
 
 const LandingPage = ({ onNavigate }: { onNavigate: (page: string) => void }) => {
   const [stars, setStars] = useState([]);
@@ -103,6 +104,9 @@ const LandingPage = ({ onNavigate }: { onNavigate: (page: string) => void }) => 
             onClick={() => window.open('https://play.google.com/store/apps/details?id=dev.andre100.marcadorPontos', '_blank')}
           />
         </div>
+
+        {/* AdSense */}
+        <AdSense />
 
         {/* Features */}
         <div className="features">
