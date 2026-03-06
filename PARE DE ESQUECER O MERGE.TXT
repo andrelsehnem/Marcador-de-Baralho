@@ -1,4 +1,4 @@
-guigit add .
+git add .
 git commit -m "Descrição das alterações"
 git checkout main
 git pull
