@@ -204,6 +204,7 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
         <TouchableOpacity
           style={[
             styles.scoreCard,
+            isPortrait && styles.scoreCardPortrait,
             !isPortrait && styles.scoreCardLandscape,
             isCompactLandscape && styles.scoreCardCompactLandscape,
             getCardStyle('nos'),
@@ -222,6 +223,7 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
         <TouchableOpacity
           style={[
             styles.scoreCard,
+            isPortrait && styles.scoreCardPortrait,
             !isPortrait && styles.scoreCardLandscape,
             isCompactLandscape && styles.scoreCardCompactLandscape,
             getCardStyle('eles'),
@@ -238,14 +240,15 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
         </TouchableOpacity>
       </View>
 
-      <View style={[styles.actionsSection, !isPortrait && styles.actionsSectionLandscape, isCompactLandscape && styles.actionsSectionCompactLandscape]}>
-        <View style={[styles.rowButtons, styles.pointsGrid]}>
+      <View style={[styles.actionsSection, isPortrait && styles.actionsSectionPortrait, !isPortrait && styles.actionsSectionLandscape, isCompactLandscape && styles.actionsSectionCompactLandscape]}>
+        <View style={[styles.rowButtons, isPortrait ? styles.pointsColumn : styles.pointsGrid]}>
           {[1, 3, 6, 12].map((value) => (
             <TouchableOpacity
               key={value}
               style={[
                 styles.actionButton,
                 styles.pointButton,
+                isPortrait && styles.pointButtonPortrait,
                 { backgroundColor: value === pontosRodada ? primaryColor : cardColor, borderColor: primaryColor },
               ]}
               onPress={() => setPontosRodada(value)}
@@ -262,6 +265,7 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
             style={[
               styles.actionButton,
               styles.halfButton,
+              isPortrait && styles.actionButtonPortrait,
               { backgroundColor: cardColor, borderColor: primaryColor },
             ]}
             onPress={() => removeOnePoint('nos')}
@@ -272,6 +276,7 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
             style={[
               styles.actionButton,
               styles.halfButton,
+              isPortrait && styles.actionButtonPortrait,
               { backgroundColor: cardColor, borderColor: primaryColor },
             ]}
             onPress={() => removeOnePoint('eles')}
@@ -285,6 +290,7 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
             style={[
               styles.actionButton,
               styles.halfButton,
+              isPortrait && styles.actionButtonPortrait,
               { backgroundColor: cardColor, borderColor: colors.danger },
             ]}
             onPress={resetGame}
@@ -354,6 +360,9 @@ const styles = StyleSheet.create({
     paddingVertical: 26,
     alignItems: 'center',
   },
+  scoreCardPortrait: {
+    paddingVertical: 60,
+  },
   scoreCardLandscape: {
     paddingVertical: 18,
     borderRadius: 12,
@@ -372,9 +381,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   scoreValue: {
-    fontSize: 56,
+    fontSize: 62,
     fontWeight: '900',
-    marginVertical: 6,
+    marginVertical: 8,
   },
   roundValue: {
     fontSize: 14,
@@ -397,6 +406,10 @@ const styles = StyleSheet.create({
   actionsSection: {
     marginTop: 14,
     gap: 8,
+  },
+  actionsSectionPortrait: {
+    marginTop: 20,
+    gap: 10,
   },
   actionsSectionLandscape: {
     marginTop: 6,
@@ -429,9 +442,19 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: 0,
   },
+  pointsColumn: {
+    flexDirection: 'column',
+    gap: 10,
+  },
   pointButton: {
     width: '48.5%',
     marginBottom: 6,
+  },
+  pointButtonPortrait: {
+    marginBottom: 0,
+    paddingVertical: 14,
+    minHeight: 56,
+    width: '100%',
   },
   rowButtonsLandscapeFour: {
     justifyContent: 'space-between',
@@ -450,6 +473,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.12,
     shadowRadius: 2,
     elevation: 2,
+  },
+  actionButtonPortrait: {
+    paddingVertical: 14,
+    minHeight: 56,
   },
   actionButtonLandscape: {
     width: '48.5%',
