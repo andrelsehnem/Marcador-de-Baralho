@@ -1,4 +1,4 @@
-package com.anonymous.marcadordebaralho
+package dev.andre100.marcadorPontos
 
 import android.app.Application
 import android.content.res.Configuration

@@ -2,7 +2,7 @@
   "expo": {
     "name": "Marcador de Baralho",
     "slug": "marcador-de-baralho",
-    "version": "2.0.0",
+    "version": "2.0.4",
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -13,7 +13,7 @@
       "bundler": "metro"
     },
     "android": {
-      "package": "com.anonymous.marcadordebaralho",
+      "package": "dev.andre100.marcadorPontos",
       "navigationBar": {
         "visible": "immersive"
       }

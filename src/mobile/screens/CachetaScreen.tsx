@@ -38,12 +38,14 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
   const containerPadding = isPortrait ? 16 : 12;
 
   const [players, setPlayers] = useState<Player[]>([
-    { id: 1, name: 'Jogador 1', score: 0 },
-    { id: 2, name: 'Jogador 2', score: 0 },
+    { id: 1, name: 'Jogador 1', score: 10 },
+    { id: 2, name: 'Jogador 2', score: 10 },
   ]);
   const [editingId, setEditingId] = useState<number | null>(null);
   const [editingName, setEditingName] = useState<string>('');
   const [loaded, setLoaded] = useState(false);
+  const [initialScore, setInitialScore] = useState<string>('10');
+  const [initialScoreFocused, setInitialScoreFocused] = useState(false);
 
   useEffect(() => {
     const loadData = async () => {
@@ -79,8 +81,9 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
   };
 
   const addPlayer = () => {
-    const newId = Math.max(...players.map(p => p.id), 0) + 1;
-    setPlayers([...players, { id: newId, name: `Jogador ${newId}`, score: 0 }]);
+    const newId = Math.max(...players.map(p => p.id), 10) + 1;
+    const scoreValue = parseInt(initialScore) || 10;
+    setPlayers([...players, { id: newId, name: `Jogador ${newId}`, score: scoreValue }]);
   };
 
   const removePlayer = (playerId: number) => {
@@ -105,13 +108,15 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
   };
 
   const resetGame = () => {
-    setPlayers(players.map(p => ({ ...p, score: 0 })));
+    const scoreValue = parseInt(initialScore) || 10;
+    setPlayers(players.map(p => ({ ...p, score: scoreValue })));
   };
 
   const resetPlayers = () => {
+    const scoreValue = parseInt(initialScore) || 10;
     setPlayers([
-      { id: 1, name: 'Jogador 1', score: 0 },
-      { id: 2, name: 'Jogador 2', score: 0 },
+      { id: 1, name: 'Jogador 1', score: scoreValue },
+      { id: 2, name: 'Jogador 2', score: scoreValue },
     ]);
   };
 
@@ -251,6 +256,55 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
                 <Text style={[styles.actionButtonText, { color: colors.danger }]}>Reiniciar Jogo</Text>
               </TouchableOpacity>
             </View>
+
+            <View style={styles.initialScoreContainer}>
+              <Text style={[styles.initialScoreLabel, { color: textColor }]}>
+                Pontuação Inicial
+              </Text>
+              <View style={[
+                styles.initialScoreInputWrapper,
+                { borderColor: initialScoreFocused ? primaryColor : '#ccc' }
+              ]}>
+                <TouchableOpacity
+                  onPress={() => {
+                    const value = Math.max(parseInt(initialScore) || 0, 0);
+                    setInitialScore(Math.max(value - 1, 0).toString());
+                  }}
+                  style={[styles.initialScoreButton, { opacity: 0.7 }]}
+                >
+                  <Text style={[styles.initialScoreButtonText, { color: textColor }]}>−</Text>
+                </TouchableOpacity>
+                <TextInput
+                  style={[
+                    styles.initialScoreInput,
+                    {
+                      color: textColor,
+                    }
+                  ]}
+                  value={initialScore}
+                  onChangeText={setInitialScore}
+                  onFocus={() => setInitialScoreFocused(true)}
+                  onBlur={() => {
+                    setInitialScoreFocused(false);
+                    const value = parseInt(initialScore) || 0;
+                    setInitialScore(Math.max(value, 0).toString());
+                  }}
+                  keyboardType="number-pad"
+                  maxLength={3}
+                  placeholder="Ex: 10"
+                  placeholderTextColor={isDark ? '#666' : '#aaa'}
+                />
+                <TouchableOpacity
+                  onPress={() => {
+                    const value = Math.max(parseInt(initialScore) || 0, 0);
+                    setInitialScore((value + 1).toString());
+                  }}
+                  style={[styles.initialScoreButton, { opacity: 0.7 }]}
+                >
+                  <Text style={[styles.initialScoreButtonText, { color: textColor }]}>+</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
           </ScrollView>
         </View>
       </SafeAreaView>
@@ -377,6 +431,44 @@ const styles = StyleSheet.create({
   actionButtonText: {
     fontSize: 14,
     fontWeight: '800',
+  },
+  initialScoreContainer: {
+    marginTop: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  initialScoreLabel: {
+    fontSize: 14,
+    fontWeight: '700',
+    paddingHorizontal: 4,
+  },
+  initialScoreInputWrapper: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 6,
+    gap: 6,
+  },
+  initialScoreButton: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  initialScoreButtonText: {
+    fontSize: 20,
+    fontWeight: '700',
+  },
+  initialScoreInput: {
+    flex: 1,
+    fontSize: 16,
+    fontWeight: '600',
+    textAlign: 'center',
+    padding: 0,
   },
 });
 
