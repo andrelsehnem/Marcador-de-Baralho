@@ -3,6 +3,7 @@ const path = require('path');
 
 const distDir = path.join(__dirname, '../dist');
 const distIndexPath = path.join(distDir, 'index.html');
+const distCssDir = path.join(distDir, '_expo/static/css');
 const DEFAULT_SITE_URL = 'https://marcadordepontos.com.br';
 
 if (!fs.existsSync(distDir)) {
@@ -76,6 +77,18 @@ if (!fs.existsSync(distIndexPath)) {
 
 const templateHtml = fs.readFileSync(distIndexPath, 'utf8');
 
+const stylesheetHrefs = fs.existsSync(distCssDir)
+  ? fs
+      .readdirSync(distCssDir)
+      .filter((fileName) => fileName.endsWith('.css'))
+      .sort()
+      .map((fileName) => `/_expo/static/css/${fileName}`)
+  : [];
+
+if (stylesheetHrefs.length === 0) {
+  console.log('⚠️ Nenhum CSS encontrado em dist/_expo/static/css.');
+}
+
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 function upsertMetaTag(html, attr, key, content) {
@@ -101,10 +114,26 @@ function upsertCanonical(html, href) {
   return html.replace('</head>', `    ${tag}\n</head>`);
 }
 
+function ensureStylesheets(html, hrefs) {
+  let updatedHtml = html;
+
+  for (const href of hrefs) {
+    const escapedHref = escapeRegExp(href);
+    const linkPattern = new RegExp(`<link\\b[^>]*href=["']${escapedHref}["'][^>]*>`, 'i');
+
+    if (!linkPattern.test(updatedHtml)) {
+      updatedHtml = updatedHtml.replace('</head>', `    <link rel="stylesheet" href="${href}">\n</head>`);
+    }
+  }
+
+  return updatedHtml;
+}
+
 function buildRouteHtml(route) {
   const canonicalUrl = `${baseUrl}${route.path}`;
   let html = templateHtml;
 
+  html = ensureStylesheets(html, stylesheetHrefs);
   html = html.replace(/<title[\s\S]*?<\/title>/i, `<title>${route.title}</title>`);
   html = upsertMetaTag(html, 'name', 'description', route.description);
   html = upsertMetaTag(html, 'name', 'robots', 'index,follow');
@@ -153,5 +182,15 @@ Sitemap: ${baseUrl}/sitemap.xml
 
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml, 'utf8');
 fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt, 'utf8');
+
+const appAdsSource = path.join(__dirname, '../app-ads.txt');
+const appAdsDestination = path.join(distDir, 'app-ads.txt');
+
+if (fs.existsSync(appAdsSource)) {
+  fs.copyFileSync(appAdsSource, appAdsDestination);
+  console.log('✅ app-ads.txt copiado para dist/');
+} else {
+  console.log('⚠️ app-ads.txt não encontrado na raiz do projeto.');
+}
 
 console.log(`✅ páginas SEO, sitemap.xml e robots.txt gerados em dist/ (base: ${baseUrl})`);
