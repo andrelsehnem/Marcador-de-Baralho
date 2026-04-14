@@ -1,6 +1,6 @@
 {
   "name": "marcador-de-baralho",
-  "version": "2.0.10",
+  "version": "2.0.13",
   "description": "Acompanhe suas mãos e jogadas",
   "scripts": {
     "start": "expo start",

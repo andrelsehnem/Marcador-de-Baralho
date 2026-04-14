@@ -4,6 +4,7 @@ import * as RNIap from 'react-native-iap';
 import { ErrorCode } from 'react-native-iap';
 import {
   PRODUCT_ID,
+  PROMOTIONAL_OFFER_ID,
   getProductDetails,
   setPurchaseStatus,
   isBillingSupportedRuntime,
@@ -16,6 +17,24 @@ const getPurchaseErrorMessage = (error: { code?: string | null }) => {
   }
 
   return 'Não foi possível completar a compra. Tente novamente.';
+};
+
+const getPromotionalOfferToken = (product: RNIap.ProductAndroid): string | null => {
+  const discountOffer = product.discountOffers?.find(
+    (offer) =>
+      offer.id === PROMOTIONAL_OFFER_ID ||
+      offer.purchaseOptionIdAndroid === PROMOTIONAL_OFFER_ID
+  );
+
+  if (discountOffer?.offerTokenAndroid) {
+    return discountOffer.offerTokenAndroid;
+  }
+
+  const legacyOffer = product.oneTimePurchaseOfferDetailsAndroid?.find(
+    (offer) => offer.offerId === PROMOTIONAL_OFFER_ID || offer.purchaseOptionId === PROMOTIONAL_OFFER_ID
+  );
+
+  return legacyOffer?.offerToken || null;
 };
 
 export const useBillingPurchase = () => {
@@ -93,10 +112,20 @@ export const useBillingPurchase = () => {
         return;
       }
 
+      const promotionalOfferToken = getPromotionalOfferToken(product);
+      if (!promotionalOfferToken) {
+        Alert.alert(
+          'Oferta promocional indisponível',
+          `A oferta ${PROMOTIONAL_OFFER_ID} não foi encontrada para este usuário. Compra bloqueada para evitar cobrança no preço cheio.`
+        );
+        setLoading(false);
+        return;
+      }
+
       await RNIap.requestPurchase({
         type: 'in-app',
         request: {
-          google: { skus: [sku] },
+          google: { skus: [sku], offerToken: promotionalOfferToken },
         },
       });
       // O resultado chega via purchaseUpdatedListener acima
