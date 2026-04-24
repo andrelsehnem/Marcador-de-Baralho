@@ -1,139 +1,112 @@
 import React, { useState } from 'react';
 import './ListaJogos.css';
-import Button from '../../../shared/components/Button';
 import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
-import { useThemeStyles } from '../../../shared/hooks/useThemeStyles';
-import { useResponsive } from '../../../shared/hooks/useResponsive';
+
 const ListaJogos: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }) => {
-  const themeStyles = useThemeStyles();
-  const responsive = useResponsive();
   const [expandContent, setExpandContent] = useState(false);
 
   return (
-    <div
-      className="home-container"
-      style={{
-        backgroundColor: themeStyles.containerBg,
-        color: themeStyles.textPrimary,
-      }}
-    >
-      <ThemeToggle />
-      <div className="home-content">
-        <h1 className="home-title" style={{ color: themeStyles.textPrimary }}>
-          Marcador de Pontos Online
-        </h1>
-        <p className="home-subtitle" style={{ color: themeStyles.textSecondary }}>
-          Acompanhe suas mãos e jogadas com facilidade!
-        </p>
+    <div className="lista-page">
+      <div className="lista-toggle">
+        <ThemeToggle />
+      </div>
 
-        <div className="button-container">
-          <Button
-            text="Truco"
-            backgroundColor={themeStyles.buttonPrimary.bg}
-            textColor={themeStyles.buttonPrimary.text}
-            onClick={() => onNavigate('truco')}
+      <div className="lista-stars" aria-hidden="true">
+        {Array.from({ length: 28 }).map((_, index) => (
+          <span
+            key={index}
+            className="lista-star"
+            style={{
+              left: `${(index * 17) % 100}%`,
+              top: `${(index * 29) % 100}%`,
+              animationDelay: `${(index % 7) * 0.4}s`,
+            }}
           />
+        ))}
+      </div>
 
-          <Button
-            text={responsive.isMobile ? 'Cacheta' : 'Cacheta'}
-            backgroundColor={themeStyles.buttonPrimaryAlt.bg}
-            textColor={themeStyles.buttonPrimaryAlt.text}
-            onClick={() => onNavigate('cacheta')}
-            className="button-secondary"
-            borderColor={themeStyles.buttonSecondary.border}
-            borderWidth={themeStyles.buttonSecondary.borderWidth}
-          />
+      <div className="lista-content">
+        <header className="lista-hero">
+          <span className="lista-badge">Lista de jogos</span>
+          <h1 className="lista-title">
+            Escolha sua <span>partida</span>
+          </h1>
+          <p className="lista-subtitle">
+            Acesse os marcadores e guias de cada jogo em uma experiência rápida e elegante.
+          </p>
+        </header>
 
-          <Button
-            text="Como jogar truco"
-            backgroundColor={themeStyles.buttonSecondary.bg}
-            textColor={themeStyles.buttonSecondary.text}
-            onClick={() => onNavigate('como-jogar-truco')}
-            className="button-secondary"
-            borderColor={themeStyles.buttonSecondary.border}
-            borderWidth={themeStyles.buttonSecondary.borderWidth}
-          />
+        <section className="lista-grid" aria-label="Ações de jogos">
+          <button className="lista-card card-gold" onClick={() => onNavigate('truco')}>
+            <div className="lista-card-icon">🎯</div>
+            <div className="lista-card-title">Truco</div>
+            <div className="lista-card-text">Abrir marcador de pontos</div>
+          </button>
 
-          <Button
-            text="Como jogar cacheta"
-            backgroundColor={themeStyles.buttonSecondary.bg}
-            textColor={themeStyles.buttonSecondary.text}
-            onClick={() => onNavigate('como-jogar-cacheta')}
-            className="button-secondary"
-            borderColor={themeStyles.buttonSecondary.border}
-            borderWidth={themeStyles.buttonSecondary.borderWidth}
-          />
+          <button className="lista-card card-blue" onClick={() => onNavigate('cacheta')}>
+            <div className="lista-card-icon">🃏</div>
+            <div className="lista-card-title">Cacheta</div>
+            <div className="lista-card-text">Abrir marcador de pontos</div>
+          </button>
+
+          <button className="lista-card card-outline" onClick={() => onNavigate('como-jogar-truco')}>
+            <div className="lista-card-icon">📘</div>
+            <div className="lista-card-title">Como jogar Truco</div>
+            <div className="lista-card-text">Regras e dicas rápidas</div>
+          </button>
+
+          <button className="lista-card card-outline" onClick={() => onNavigate('como-jogar-cacheta')}>
+            <div className="lista-card-icon">📗</div>
+            <div className="lista-card-title">Como jogar Cacheta</div>
+            <div className="lista-card-text">Regras e dicas rápidas</div>
+          </button>
+        </section>
+
+        <div className="lista-section-toggle">
+          <button
+            className="lista-expand-button"
+            onClick={() => setExpandContent(!expandContent)}
+          >
+            {expandContent ? '▼ Ocultar Informações' : '► Sobre os Jogos'}
+          </button>
         </div>
 
-        {/* Botão para expandir conteúdo educacional */}
-        <button
-          onClick={() => setExpandContent(!expandContent)}
-          style={{
-            marginTop: '30px',
-            marginBottom: '20px',
-            padding: '10px 20px',
-            backgroundColor: themeStyles.buttonSecondary.bg,
-            color: themeStyles.buttonSecondary.text,
-            border: `1px solid ${themeStyles.buttonSecondary.border}`,
-            borderRadius: '6px',
-            cursor: 'pointer',
-            fontSize: '0.95em',
-            fontWeight: '500',
-            transition: 'all 0.3s ease',
-            width: '100%'
-          }}
-        >
-          {expandContent ? '▼ Ocultar Informações' : '► Sobre os Jogos'}
-        </button>
-
         {expandContent && (
-          <section style={{ marginTop: '20px', marginBottom: '30px', opacity: expandContent ? 1 : 0, transition: 'opacity 0.3s' }}>
-            <h2 style={{ color: themeStyles.textPrimary, marginBottom: '15px', fontSize: '1.3em' }}>
+          <section className="lista-info" aria-live="polite">
+            <h2>
               Jogos Disponíveis
             </h2>
-            <p style={{ color: themeStyles.textSecondary, lineHeight: '1.6', marginBottom: '15px' }}>
+            <p>
               Bem-vindo ao melhor marcador de pontos do Brasil! Aqui você encontra ferramentas inteligentes para marcar pontos de forma rápida, prática e totalmente gratuita. Escolha entre os jogos mais populares e comece a jogar agora mesmo:
             </p>
 
-            <div style={{ 
-              backgroundColor: themeStyles.surface,
-              padding: '15px',
-              borderRadius: '8px',
-              marginBottom: '20px',
-              borderLeft: `4px solid ${themeStyles.buttonPrimary.bg}`
-            }}>
-              <h3 style={{ color: themeStyles.textPrimary, marginBottom: '8px' }}>🎯 Truco Paulista</h3>
-              <p style={{ color: themeStyles.textSecondary, fontSize: '0.95em' }}>
+            <div className="lista-info-card info-truco">
+              <h3>🎯 Truco Paulista</h3>
+              <p>
                 O jogo clássico de cartas que reúne estratégia, blefe e adrenalina. Marque os clássicos 1 ponto, truco (3), seis (6), nove (9) e doze (12) pontos. Perfeito para duplas e competições acirradas.
               </p>
             </div>
 
-            <div style={{ 
-              backgroundColor: themeStyles.surface,
-              padding: '15px',
-              borderRadius: '8px',
-              marginBottom: '20px',
-              borderLeft: `4px solid ${themeStyles.buttonPrimaryAlt.bg}`
-            }}>
-              <h3 style={{ color: themeStyles.textPrimary, marginBottom: '8px' }}>🃏 Cacheta</h3>
-              <p style={{ color: themeStyles.textSecondary, fontSize: '0.95em' }}>
+            <div className="lista-info-card info-cacheta">
+              <h3>🃏 Cacheta</h3>
+              <p>
                 Um jogo de combinações onde o planejamento é essencial. Organize suas cartas em trincas e sequências. Suporta múltiplos jogadores e pontuações personalizadas para qualquer mesa.
               </p>
             </div>
 
-            <p style={{ color: themeStyles.textSecondary, lineHeight: '1.6', fontSize: '0.95em' }}>
+            <p>
               Ambos os marcadores foram desenvolvidos para serem intuitivos, rápidos e responsivos em qualquer dispositivo. Salve suas partidas automaticamente, mude de tema conforme sua preferência e aproveite uma experiência sem anúncios agressivos.
             </p>
 
-            <h2 style={{ color: themeStyles.textPrimary, marginTop: '30px', marginBottom: '15px', fontSize: '1.3em' }}>
+            <h2>
               Por que usar nosso marcador?
             </h2>
-            <ul style={{ color: themeStyles.textSecondary, lineHeight: '1.8', listStyleType: 'none', paddingLeft: 0 }}>
-              <li style={{ marginBottom: '10px' }}>✓ <strong>Totalmente gratuito</strong> - Sem custos ocultos ou necessidade de cadastro</li>
-              <li style={{ marginBottom: '10px' }}>✓ <strong>Funciona online e offline</strong> - Jogue a qualquer hora e lugar</li>
-              <li style={{ marginBottom: '10px' }}>✓ <strong>Sincronização automática</strong> - Seus dados salvos no navegador</li>
-              <li style={{ marginBottom: '10px' }}>✓ <strong>Tema escuro e claro</strong> - Escolha o modo que melhor funciona para você</li>
-              <li style={{ marginBottom: '10px' }}>✓ <strong>Responsivo</strong> - Funciona perfeitamente em celular, tablet e computador</li>
+            <ul>
+              <li>✓ <strong>Totalmente gratuito</strong> - Sem custos ocultos ou necessidade de cadastro</li>
+              <li>✓ <strong>Funciona online e offline</strong> - Jogue a qualquer hora e lugar</li>
+              <li>✓ <strong>Sincronização automática</strong> - Seus dados salvos no navegador</li>
+              <li>✓ <strong>Tema escuro e claro</strong> - Escolha o modo que melhor funciona para você</li>
+              <li>✓ <strong>Responsivo</strong> - Funciona perfeitamente em celular, tablet e computador</li>
               <li>✓ <strong>Sem distrações</strong> - Interface simples e focada apenas no jogo</li>
             </ul>
           </section>
