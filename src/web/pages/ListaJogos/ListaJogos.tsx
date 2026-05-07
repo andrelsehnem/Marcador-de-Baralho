@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './ListaJogos.css';
 import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
+import { AdsterraSlot } from '../../../shared/components/Adsterra/Adsterra';
+import { useResponsive } from '../../../shared/hooks/useResponsive';
 
 const ListaJogos: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }) => {
   const [expandContent, setExpandContent] = useState(false);
+  const { isDesktop } = useResponsive();
 
   return (
     <div className="lista-page">
@@ -75,6 +78,18 @@ const ListaJogos: React.FC<{ onNavigate: (page: string) => void }> = ({ onNaviga
             </button>
           </div>
         </section>
+
+        {isDesktop && (
+          <AdsterraSlot
+            placement="nativeBannerWeb"
+            style={{
+              margin: '8px auto 20px',
+              maxWidth: 960,
+              padding: '0 12px',
+              boxSizing: 'border-box',
+            }}
+          />
+        )}
 
         <div className="lista-section-toggle">
           <button
