@@ -3,6 +3,8 @@ import { ArrowLeft } from 'lucide-react';
 import './ComoJogarCacheta.css';
 import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
 import { useThemeStyles } from '../../../shared/hooks/useThemeStyles';
+import { AdsterraSlot } from '../../../shared/components/Adsterra/Adsterra';
+import { useResponsive } from '../../../shared/hooks/useResponsive';
 
 
 interface ComoJogarCachetaProps {
@@ -12,6 +14,7 @@ interface ComoJogarCachetaProps {
 
 const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCacheta }) => {
   const themeStyles = useThemeStyles();
+  const { isDesktop } = useResponsive();
 
   return (
     <div
@@ -34,44 +37,45 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
         <ThemeToggle />
       </div>
 
-      <main className="como-jogar-cacheta-content">
-        <h1 className="como-jogar-cacheta-title">Como jogar cacheta</h1>
-        <p className="como-jogar-cacheta-subtitle" style={{ color: themeStyles.textSecondary }}>
-          Tutorial completo para entender a lógica da Cacheta, organizar sua mão e jogar com mais estratégia.
-        </p>
-
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
-          <h2>O que você vai aprender neste guia</h2>
-          <ul>
-            <li><strong>Para iniciantes:</strong> objetivo, estrutura da rodada e noções de combinação.</li>
-            <li><strong>Nível intermediário:</strong> leitura de descarte, gestão de risco e decisões de fechamento.</li>
-            <li><strong>Aplicação prática:</strong> checklist simples para sua próxima partida.</li>
-          </ul>
-        </section>
-
-        <section className="como-jogar-cacheta-level" aria-label="Bloco para iniciantes">
-          <h2 className="como-jogar-cacheta-level-title">Para iniciantes</h2>
-          <p className="como-jogar-cacheta-level-subtitle" style={{ color: themeStyles.textSecondary }}>
-            Esta parte cobre os fundamentos para você começar sem travar no meio da mesa.
+      <div className="como-jogar-cacheta-layout">
+        <main className="como-jogar-cacheta-content">
+          <h1 className="como-jogar-cacheta-title">Como jogar cacheta</h1>
+          <p className="como-jogar-cacheta-subtitle" style={{ color: themeStyles.textSecondary }}>
+            Tutorial completo para entender a lógica da Cacheta, organizar sua mão e jogar com mais estratégia.
           </p>
-        </section>
 
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
-          <h2>O que é Cacheta e qual é o objetivo</h2>
-          <p>
-            A Cacheta é um jogo de cartas em que você busca organizar sua mão em combinações válidas para “bater” antes dos
-            adversários. Em muitas mesas, as combinações envolvem trincas (mesmo valor) e sequências do mesmo naipe.
-            Apesar das variações regionais, a essência permanece: administrar a mão com eficiência, comprando e descartando
-            cartas com inteligência até completar o jogo.
-          </p>
-          <p>
-            Diferente de jogos em que você apenas responde à rodada, na Cacheta cada jogada muda as possibilidades futuras.
-            Isso significa que planejar dois ou três movimentos à frente costuma fazer muita diferença. Quem aprende a pensar
-            em blocos de combinação evolui mais rápido e reduz erros por impulso.
-          </p>
-        </section>
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+            <h2>O que você vai aprender neste guia</h2>
+            <ul>
+              <li><strong>Para iniciantes:</strong> objetivo, estrutura da rodada e noções de combinação.</li>
+              <li><strong>Nível intermediário:</strong> leitura de descarte, gestão de risco e decisões de fechamento.</li>
+              <li><strong>Aplicação prática:</strong> checklist simples para sua próxima partida.</li>
+            </ul>
+          </section>
 
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+          <section className="como-jogar-cacheta-level" aria-label="Bloco para iniciantes">
+            <h2 className="como-jogar-cacheta-level-title">Para iniciantes</h2>
+            <p className="como-jogar-cacheta-level-subtitle" style={{ color: themeStyles.textSecondary }}>
+              Esta parte cobre os fundamentos para você começar sem travar no meio da mesa.
+            </p>
+          </section>
+
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+            <h2>O que é Cacheta e qual é o objetivo</h2>
+            <p>
+              A Cacheta é um jogo de cartas em que você busca organizar sua mão em combinações válidas para “bater” antes dos
+              adversários. Em muitas mesas, as combinações envolvem trincas (mesmo valor) e sequências do mesmo naipe.
+              Apesar das variações regionais, a essência permanece: administrar a mão com eficiência, comprando e descartando
+              cartas com inteligência até completar o jogo.
+            </p>
+            <p>
+              Diferente de jogos em que você apenas responde à rodada, na Cacheta cada jogada muda as possibilidades futuras.
+              Isso significa que planejar dois ou três movimentos à frente costuma fazer muita diferença. Quem aprende a pensar
+              em blocos de combinação evolui mais rápido e reduz erros por impulso.
+            </p>
+          </section>
+
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
           <h2>Quantidade de jogadores e preparação da mesa</h2>
           <p>
             A Cacheta normalmente é jogada com 2 a 6 pessoas, dependendo da regra local e da quantidade de baralhos usados.
@@ -82,9 +86,21 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
             Esse acordo prévio parece detalhe pequeno, mas evita confusão quando o jogo esquenta. Quando todos conhecem as
             mesmas regras, a partida flui melhor, as decisões ficam mais justas e o aprendizado de quem está começando aumenta.
           </p>
-        </section>
+          </section>
 
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+          {isDesktop && (
+            <AdsterraSlot
+              placement="nativeBannerWeb"
+              style={{
+                margin: '8px auto 4px',
+                maxWidth: 960,
+                padding: '0 8px',
+                boxSizing: 'border-box',
+              }}
+            />
+          )}
+
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
           <h2>Fluxo básico de uma jogada</h2>
           <ol>
             <li>Você analisa sua mão e identifica quais grupos já estão quase prontos.</li>
@@ -97,9 +113,9 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
             Esse ciclo se repete até alguém bater. Em partidas com ritmo acelerado, o segredo é não perder tempo com cartas
             desconectadas do seu plano principal. Quanto mais claro o objetivo da sua mão, mais consistente tende a ser seu jogo.
           </p>
-        </section>
+          </section>
 
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
           <h2>Como pensar em combinações sem se confundir</h2>
           <p>
             Um erro comum de iniciantes é tentar fechar muitas ideias ao mesmo tempo. A estratégia mais segura é escolher uma
@@ -111,16 +127,16 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
             combinações com alta chance de fechamento. Flexíveis são cartas que podem entrar em mais de uma opção. Esse raciocínio
             ajuda a decidir descarte com menos arrependimento.
           </p>
-        </section>
+          </section>
 
-        <section className="como-jogar-cacheta-level" aria-label="Bloco de nível intermediário">
+          <section className="como-jogar-cacheta-level" aria-label="Bloco de nível intermediário">
           <h2 className="como-jogar-cacheta-level-title">Nível intermediário</h2>
           <p className="como-jogar-cacheta-level-subtitle" style={{ color: themeStyles.textSecondary }}>
             Aqui entram decisões de leitura de mesa e gestão de risco para aumentar sua consistência.
           </p>
-        </section>
+          </section>
 
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
           <h2>Leitura de descarte e informação de mesa</h2>
           <p>
             Na Cacheta, o descarte conta uma história. Se um adversário descarta repetidamente cartas de um naipe específico,
@@ -131,9 +147,9 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
             Você não precisa acertar todas as leituras. O objetivo é acumular sinais suficientes para tomar decisões melhores do
             que decisões aleatórias. Com o tempo, esse hábito aumenta sua taxa de mãos bem resolvidas e reduz jogadas precipitadas.
           </p>
-        </section>
+          </section>
 
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
           <h2>Gestão de risco: insistir ou reorganizar a mão</h2>
           <p>
             Em certas rodadas, insistir na mesma combinação por muito tempo pode travar sua evolução. Se faltam várias cartas
@@ -145,9 +161,9 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
             Se a mesa está rápida, decisões conservadoras demais podem te deixar para trás. Equilibrar paciência e adaptação é
             um diferencial real no resultado final.
           </p>
-        </section>
+          </section>
 
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
           <h2>Erros frequentes na Cacheta</h2>
           <ul>
             <li>Guardar carta fraca por apego, mesmo sem função no plano da mão.</li>
@@ -160,9 +176,9 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
             Reconhecer esses pontos cedo acelera sua evolução. A melhoria na Cacheta costuma ser rápida quando você revisa
             decisões com calma depois de cada partida.
           </p>
-        </section>
+          </section>
 
-        <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
+          <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
           <h2>Checklist para sua próxima partida</h2>
           <ol>
             <li>Confirmar regras da casa e pontuação antes de começar.</li>
@@ -176,16 +192,25 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
             Com esse processo, você joga com mais clareza, reduz erros por ansiedade e aumenta as chances de bater no momento
             certo. A Cacheta fica muito mais divertida quando você entende não só “o que fazer”, mas também “por que fazer”.
           </p>
-        </section>
+          </section>
 
-        <button
-          className="como-jogar-cacheta-play-btn"
-          onClick={onPlayCacheta}
-          style={{ backgroundColor: themeStyles.buttonPrimaryAlt.bg, color: '#ffffff' }}
-        >
-          Ir para o marcador de Cacheta
-        </button>
-      </main>
+          <button
+            className="como-jogar-cacheta-play-btn"
+            onClick={onPlayCacheta}
+            style={{ backgroundColor: themeStyles.buttonPrimaryAlt.bg, color: '#ffffff' }}
+          >
+            Ir para o marcador de Cacheta
+          </button>
+        </main>
+
+        {isDesktop && (
+          <aside className="como-jogar-cacheta-sidebar" aria-label="Publicidade lateral">
+            <div className="como-jogar-cacheta-sidebar-sticky">
+              <AdsterraSlot placement="banner160x600Web" />
+            </div>
+          </aside>
+        )}
+      </div>
     </div>
   );
 };

@@ -3,6 +3,9 @@ import './web/styles/global.css';
 import { ThemeProvider } from './shared/contexts/ThemeContext';
 import Footer from './shared/components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import { AdsterraGlobal, AdsterraSlot } from './shared/components/Adsterra/Adsterra';
+import { useResponsive } from './shared/hooks/useResponsive';
+import { getAdsterraPagePlan } from './shared/constants/adsterra';
 
 const ListaJogos = lazy(() => import('./web/pages/ListaJogos/ListaJogos'));
 const Landing = lazy(() => import('./web/pages/Landing/Landing'));
@@ -94,6 +97,7 @@ const upsertCanonical = (href: string) => {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<WebPage>('landing');
+  const { isMobile } = useResponsive();
 
   useEffect(() => {
     const handleRouteChange = () => {
@@ -135,9 +139,14 @@ export default function App() {
     window.history.pushState({}, '', path);
   };
 
+  const adPlan = getAdsterraPagePlan(currentPage, isMobile ? 'webmobile' : 'web');
+
   return (
     <div style={{ width: '100%', minHeight: '100vh', margin: 0, padding: 0, display: 'flex', flexDirection: 'column' }}>
       <ThemeProvider>
+        {adPlan.globalPlacements.map((placement) => (
+          <AdsterraGlobal key={placement} placement={placement} />
+        ))}
         <main style={{ flex: 1 }}>
           <Suspense fallback={null}>
             {currentPage === 'landing' && <Landing onNavigate={navigateTo} />}
@@ -159,6 +168,26 @@ export default function App() {
             {currentPage === 'cacheta' && <Cacheta onBack={() => navigateTo('listajogos')} />}
           </Suspense>
         </main>
+        {adPlan.contentPlacement && (
+          <AdsterraSlot
+            placement={adPlan.contentPlacement}
+            style={{
+              margin: '16px auto 0',
+              padding: '0 12px',
+              boxSizing: 'border-box',
+            }}
+          />
+        )}
+        {adPlan.footerPlacement && (
+          <AdsterraSlot
+            placement={adPlan.footerPlacement}
+            style={{
+              margin: '12px auto 0',
+              padding: '0 12px',
+              boxSizing: 'border-box',
+            }}
+          />
+        )}
         <Footer />
       </ThemeProvider>
       <Analytics />
