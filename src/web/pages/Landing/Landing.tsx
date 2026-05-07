@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Landing.css';
-import { AdsterraSlot } from '../../../shared/components/Adsterra/Adsterra';
-import { useResponsive } from '../../../shared/hooks/useResponsive';
 
 const CARDS: { suit: string; red: boolean }[] = [
   { suit: '♠', red: false },
@@ -15,7 +13,6 @@ const LandingPage = ({ onNavigate }: { onNavigate: (page: string) => void }) => 
   const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=dev.andre100.marcadorPontos';
   const [stars, setStars] = useState<Star[]>([]);
   const [showAppSticky, setShowAppSticky] = useState(false);
-  const { isDesktop } = useResponsive();
 
   const openPlayStore = () => {
     window.open(PLAY_STORE_URL, '_blank', 'noopener,noreferrer');
@@ -195,17 +192,6 @@ const LandingPage = ({ onNavigate }: { onNavigate: (page: string) => void }) => 
           </div>
         </div>
 
-        {isDesktop && (
-          <AdsterraSlot
-            placement="nativeBannerWeb"
-            style={{
-              margin: '20px auto 8px',
-              maxWidth: 960,
-              padding: '0 20px',
-              boxSizing: 'border-box',
-            }}
-          />
-        )}
 
         {/* ── Features ─────────────────────────── */}
         <div className="features">

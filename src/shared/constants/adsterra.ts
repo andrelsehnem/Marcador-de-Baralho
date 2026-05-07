@@ -15,6 +15,7 @@ export type AdsterraPlacementName =
   | 'banner728x90Web'
   | 'banner300x250Web'
   | 'banner160x600Web'
+  | 'banner120x600Web'
   | 'banner160x300Web'
   | 'banner468x60Web'
   | 'nativeBannerWeb';
@@ -127,6 +128,20 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
       params: {},
     },
   },
+  banner120x600Web: {
+    zoneId: '29261844',
+    label: '120x600_sidebar',
+    enabled: true,
+    type: 'banner',
+    scriptSrc: 'https://www.highperformanceformat.com/68738778477679b0fae60a0ca7f23bfb/invoke.js',
+    options: {
+      key: '68738778477679b0fae60a0ca7f23bfb',
+      format: 'iframe',
+      width: 160,
+      height: 600,
+      params: {},
+    },
+  },
   banner160x300Web: {
     zoneId: '29261845',
     label: '160x300_1',
@@ -166,7 +181,11 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
 };
 
 const MOBILE_PLAN: AdsterraPagePlan = {
-  globalPlacements: ['socialBarWebMobile'],
+  globalPlacements: [],
+};
+
+const LANDING_PLAN: AdsterraPagePlan = {
+  globalPlacements: [],
 };
 
 const DESKTOP_CONTENT_PLAN: AdsterraPagePlan = {
@@ -181,8 +200,8 @@ const DESKTOP_GAME_PLAN: AdsterraPagePlan = {
 
 export const ADSTERRA_PAGE_PLAN: Record<AdsterraWebPage, Record<AdsterraViewport, AdsterraPagePlan>> = {
   landing: {
-    web: DESKTOP_CONTENT_PLAN,
-    webmobile: MOBILE_PLAN,
+    web: LANDING_PLAN,
+    webmobile: LANDING_PLAN,
   },
   listajogos: {
     web: DESKTOP_CONTENT_PLAN,

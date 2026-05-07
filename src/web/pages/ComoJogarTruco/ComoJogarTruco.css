@@ -30,6 +30,42 @@
   padding: 0 16px 56px;
 }
 
+.como-jogar-truco-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  gap: 24px;
+}
+
+.como-jogar-truco-layout .como-jogar-truco-content {
+  flex: 1;
+  min-width: 0;
+  max-width: 880px;
+  margin: 0;
+  padding: 0 0 56px;
+}
+
+.como-jogar-truco-sidebar {
+  flex-shrink: 0;
+  width: 160px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .como-jogar-truco-layout {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  .como-jogar-truco-sidebar {
+    display: none;
+  }
+}
+
 .como-jogar-truco-title {
   font-size: 2rem;
   line-height: 1.2;

@@ -37,7 +37,8 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
         <ThemeToggle />
       </div>
 
-      <main className="como-jogar-cacheta-content">
+      <div className="como-jogar-cacheta-layout">
+        <main className="como-jogar-cacheta-content">
           <h1 className="como-jogar-cacheta-title">Como jogar cacheta</h1>
           <p className="como-jogar-cacheta-subtitle" style={{ color: themeStyles.textSecondary }}>
             Tutorial completo para entender a lógica da Cacheta, organizar sua mão e jogar com mais estratégia.
@@ -86,18 +87,6 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
             mesmas regras, a partida flui melhor, as decisões ficam mais justas e o aprendizado de quem está começando aumenta.
           </p>
           </section>
-
-          {isDesktop && (
-            <AdsterraSlot
-              placement="nativeBannerWeb"
-              style={{
-                margin: '8px auto 4px',
-                maxWidth: 960,
-                padding: '0 8px',
-                boxSizing: 'border-box',
-              }}
-            />
-          )}
 
           <section className="como-jogar-cacheta-card" style={{ backgroundColor: themeStyles.surface, borderColor: themeStyles.buttonSecondary.border }}>
           <h2>Fluxo básico de uma jogada</h2>
@@ -200,7 +189,13 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
           >
             Ir para o marcador de Cacheta
           </button>
-      </main>
+        </main>
+        {isDesktop && (
+          <aside className="como-jogar-cacheta-sidebar">
+            <AdsterraSlot placement="banner120x600Web" />
+          </aside>
+        )}
+      </div>
     </div>
   );
 };
