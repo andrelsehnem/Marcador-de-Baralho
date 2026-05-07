@@ -37,8 +37,7 @@ const ComoJogarTruco: React.FC<ComoJogarTrucoProps> = ({ onBack, onPlayTruco }) 
         <ThemeToggle />
       </div>
 
-      <div className="como-jogar-truco-layout">
-        <main className="como-jogar-truco-content">
+      <main className="como-jogar-truco-content">
           <h1 className="como-jogar-truco-title">Como jogar truco</h1>
           <p className="como-jogar-truco-subtitle" style={{ color: themeStyles.textSecondary }}>
             Tutorial completo para iniciantes aprenderem as regras, a pontuação e as melhores decisões durante a partida.
@@ -230,16 +229,7 @@ const ComoJogarTruco: React.FC<ComoJogarTrucoProps> = ({ onBack, onPlayTruco }) 
           >
             Ir para o marcador de Truco
           </button>
-        </main>
-
-        {isDesktop && (
-          <aside className="como-jogar-truco-sidebar" aria-label="Publicidade lateral">
-            <div className="como-jogar-truco-sidebar-sticky">
-              <AdsterraSlot placement="banner160x600Web" />
-            </div>
-          </aside>
-        )}
-      </div>
+      </main>
     </div>
   );
 };

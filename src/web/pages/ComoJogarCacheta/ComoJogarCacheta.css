@@ -24,19 +24,10 @@
   font-weight: 600;
 }
 
-.como-jogar-cacheta-layout {
-  width: min(1120px, 100%);
-  margin: 0 auto;
-}
-
 .como-jogar-cacheta-content {
   max-width: 880px;
   margin: 0 auto;
   padding: 0 16px 56px;
-}
-
-.como-jogar-cacheta-sidebar {
-  display: none;
 }
 
 .como-jogar-cacheta-title {
@@ -97,33 +88,6 @@
   font-weight: 700;
   cursor: pointer;
   margin-top: 8px;
-}
-
-@media (min-width: 1280px) {
-  .como-jogar-cacheta-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 880px) 160px;
-    gap: 32px;
-    align-items: start;
-    padding: 0 16px;
-    box-sizing: border-box;
-  }
-
-  .como-jogar-cacheta-content {
-    max-width: none;
-    margin: 0;
-    padding: 0 0 56px;
-  }
-
-  .como-jogar-cacheta-sidebar {
-    display: block;
-    padding-top: 8px;
-  }
-
-  .como-jogar-cacheta-sidebar-sticky {
-    position: sticky;
-    top: 24px;
-  }
 }
 
 @media (max-width: 768px) {

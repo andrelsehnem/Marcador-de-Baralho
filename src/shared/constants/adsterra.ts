@@ -74,7 +74,7 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
   banner320x50WebMobile: {
     zoneId: '29261846',
     label: '320x50_1',
-    enabled: true,
+    enabled: false,
     type: 'banner',
     scriptSrc: 'https://www.highperformanceformat.com/d326ebf439aaee7fd7add7e12c54b732/invoke.js',
     options: {
@@ -88,7 +88,7 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
   banner728x90Web: {
     zoneId: '29261847',
     label: '728x90_1',
-    enabled: true,
+    enabled: false,
     type: 'banner',
     scriptSrc: 'https://www.highperformanceformat.com/d42643ed8653d521c26692b0a3ed0346/invoke.js',
     options: {
@@ -102,7 +102,7 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
   banner300x250Web: {
     zoneId: '29261848',
     label: '300x250_1',
-    enabled: true,
+    enabled: false,
     type: 'banner',
     scriptSrc: 'https://www.highperformanceformat.com/38957d5408e329a0d34658a7d0210087/invoke.js',
     options: {
@@ -116,7 +116,7 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
   banner160x600Web: {
     zoneId: '29261844',
     label: '160x600_1',
-    enabled: true,
+    enabled: false,
     type: 'banner',
     scriptSrc: 'https://www.highperformanceformat.com/68738778477679b0fae60a0ca7f23bfb/invoke.js',
     options: {
@@ -130,7 +130,7 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
   banner160x300Web: {
     zoneId: '29261845',
     label: '160x300_1',
-    enabled: true,
+    enabled: false,
     type: 'banner',
     scriptSrc: 'https://www.highperformanceformat.com/6dcb66a73f67c1d86b550613afb59b89/invoke.js',
     options: {
@@ -144,7 +144,7 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
   banner468x60Web: {
     zoneId: '29261849',
     label: '468x60_1',
-    enabled: true,
+    enabled: false,
     type: 'banner',
     scriptSrc: 'https://www.highperformanceformat.com/c7f03ba793c2bbc8dee4d9a6969f9496/invoke.js',
     options: {
@@ -167,18 +167,15 @@ export const ADSTERRA_CONFIG: Record<AdsterraPlacementName, AdsterraPlacementCon
 
 const MOBILE_PLAN: AdsterraPagePlan = {
   globalPlacements: ['socialBarWebMobile'],
-  footerPlacement: 'banner320x50WebMobile',
 };
 
 const DESKTOP_CONTENT_PLAN: AdsterraPagePlan = {
   globalPlacements: [],
-  footerPlacement: 'banner728x90Web',
   reservedPlacements: ['nativeBannerWeb', 'banner300x250Web', 'banner160x600Web', 'banner160x300Web'],
 };
 
 const DESKTOP_GAME_PLAN: AdsterraPagePlan = {
   globalPlacements: [],
-  footerPlacement: 'banner728x90Web',
   reservedPlacements: ['banner468x60Web'],
 };
 

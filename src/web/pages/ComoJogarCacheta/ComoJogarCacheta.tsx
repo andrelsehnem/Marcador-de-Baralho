@@ -37,8 +37,7 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
         <ThemeToggle />
       </div>
 
-      <div className="como-jogar-cacheta-layout">
-        <main className="como-jogar-cacheta-content">
+      <main className="como-jogar-cacheta-content">
           <h1 className="como-jogar-cacheta-title">Como jogar cacheta</h1>
           <p className="como-jogar-cacheta-subtitle" style={{ color: themeStyles.textSecondary }}>
             Tutorial completo para entender a lógica da Cacheta, organizar sua mão e jogar com mais estratégia.
@@ -201,16 +200,7 @@ const ComoJogarCacheta: React.FC<ComoJogarCachetaProps> = ({ onBack, onPlayCache
           >
             Ir para o marcador de Cacheta
           </button>
-        </main>
-
-        {isDesktop && (
-          <aside className="como-jogar-cacheta-sidebar" aria-label="Publicidade lateral">
-            <div className="como-jogar-cacheta-sidebar-sticky">
-              <AdsterraSlot placement="banner160x600Web" />
-            </div>
-          </aside>
-        )}
-      </div>
+      </main>
     </div>
   );
 };
