@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState } from 'react';
 import ThemeToggle from '../../../shared/components/ThemeToggle/ThemeToggle';
 import { useTheme } from '../../../shared/contexts/ThemeContext';
 import './Marcador.css';
+import { AdsterraSlot } from '../../../shared/components/Adsterra/Adsterra';
+import { useResponsive } from '../../../shared/hooks/useResponsive';
 
 interface MarcadorProps {
   onBack: () => void;
@@ -25,6 +27,7 @@ const DEFAULT_STATE: MarcadorState = {
 
 const Marcador: React.FC<MarcadorProps> = ({ onBack }) => {
   const { theme, colors } = useTheme();
+  const { isDesktop } = useResponsive();
 
   const [state, setState] = useState<MarcadorState>(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -182,6 +185,12 @@ const Marcador: React.FC<MarcadorProps> = ({ onBack }) => {
           </button>
         </section>
       </main>
+      {isDesktop && (
+        <AdsterraSlot
+          placement="nativeBannerWeb"
+          style={{ margin: '8px auto', maxWidth: 960, padding: '0 12px', boxSizing: 'border-box' }}
+        />
+      )}
     </div>
   );
 };
