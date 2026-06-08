@@ -35,3 +35,6 @@ local.properties
 *.jsbundle
 
 PLAY_STORE_RELEASE_NOTES_2.0.10.txt
+.build/
+.build/intermediates/
+.build/generated/
