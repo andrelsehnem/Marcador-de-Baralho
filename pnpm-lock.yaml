@@ -26,6 +26,9 @@ importers:
       expo-dev-client:
         specifier: ~6.0.20
         version: 6.0.20(expo@54.0.33)
+      expo-keep-awake:
+        specifier: ^56.0.3
+        version: 56.0.3(expo@54.0.33)(react@19.1.0)
       expo-linking:
         specifier: ~8.0.11
         version: 8.0.11(expo@54.0.33)(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
@@ -35,6 +38,9 @@ importers:
       expo-router:
         specifier: ~6.0.23
         version: 6.0.23(07326ab707e32b1377deb1c4d9fef510)
+      expo-screen-orientation:
+        specifier: ~9.0.9
+        version: 9.0.9(expo@54.0.33)(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))
       expo-status-bar:
         specifier: ~3.0.9
         version: 3.0.9(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
@@ -1789,6 +1795,12 @@ packages:
       expo: '*'
       react: '*'
 
+  expo-keep-awake@56.0.3:
+    resolution: {integrity: sha512-CLMJXtEiMKknD3Rpm8CRwE6ZJUzu2yCEmRk1sgfHAJ1zIbuEWY3dpPDubtsnuzWm+2k6Sru+yaFbYsvPWmTiBA==}
+    peerDependencies:
+      expo: '*'
+      react: '*'
+
   expo-linking@8.0.11:
     resolution: {integrity: sha512-+VSaNL5om3kOp/SSKO5qe6cFgfSIWnnQDSbA7XLs3ECkYzXRquk5unxNS3pg7eK5kNUmQ4kgLI7MhTggAEUBLA==}
     peerDependencies:
@@ -1850,6 +1862,12 @@ packages:
         optional: true
       react-server-dom-webpack:
         optional: true
+
+  expo-screen-orientation@9.0.9:
+    resolution: {integrity: sha512-UTU745XoqBvQJkZ820GTfMuOxlkppYqaeQ+x0wdu44cyrZiZugqe+egFF2+zC+SaxgAltU5EuO8GIj9xSF+YMw==}
+    peerDependencies:
+      expo: '*'
+      react-native: '*'
 
   expo-server@1.0.5:
     resolution: {integrity: sha512-IGR++flYH70rhLyeXF0Phle56/k4cee87WeQ4mamS+MkVAVP+dDlOHf2nN06Z9Y2KhU0Gp1k+y61KkghF7HdhA==}
@@ -5609,6 +5627,11 @@ snapshots:
       expo: 54.0.33(@babel/core@7.29.0)(@expo/metro-runtime@6.1.2)(expo-router@6.0.23)(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)(typescript@5.9.3)
       react: 19.1.0
 
+  expo-keep-awake@56.0.3(expo@54.0.33)(react@19.1.0):
+    dependencies:
+      expo: 54.0.33(@babel/core@7.29.0)(@expo/metro-runtime@6.1.2)(expo-router@6.0.23)(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)(typescript@5.9.3)
+      react: 19.1.0
+
   expo-linking@8.0.11(expo@54.0.33)(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0):
     dependencies:
       expo-constants: 18.0.13(expo@54.0.33)(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))
@@ -5694,6 +5717,11 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
       - supports-color
+
+  expo-screen-orientation@9.0.9(expo@54.0.33)(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0)):
+    dependencies:
+      expo: 54.0.33(@babel/core@7.29.0)(@expo/metro-runtime@6.1.2)(expo-router@6.0.23)(react-native@0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)(typescript@5.9.3)
+      react-native: 0.81.5(@babel/core@7.29.0)(@react-native/metro-config@0.85.2(@babel/core@7.29.0))(@types/react@19.1.17)(react@19.1.0)
 
   expo-server@1.0.5: {}
 

@@ -144,7 +144,11 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace 'dev.andre100.marcadorPontos'
+    
+    // Mover build para pasta com caminho mais curto
+    buildDir = file("../../.build")
     defaultConfig {
+
         applicationId 'dev.andre100.marcadorPontos'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -203,6 +207,19 @@ android {
     }
     androidResources {
         ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~'
+    }
+    externalNativeBuild {
+        cmake {
+            path file("../CMakeLists.txt")
+            version "3.22.1"
+        }
+    }
+    defaultConfig {
+        externalNativeBuild {
+            cmake {
+                arguments "-DCMAKE_OBJECT_PATH_MAX=5000", "-DANDROID_STL=c++_shared"
+            }
+        }
     }
 }
 

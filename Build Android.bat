@@ -43,9 +43,9 @@ echo.
 echo Iniciando build Android para Play Store...
 pushd "%~dp0android"
 if defined KEYSTORE_PATH (
-  call gradlew.bat bundleRelease "-PMYAPP_UPLOAD_STORE_FILE=%KEYSTORE_PATH%"
+  call gradlew.bat bundleRelease "-PMYAPP_UPLOAD_STORE_FILE=%KEYSTORE_PATH%" "-DCMAKE_OBJECT_PATH_MAX=5000"
 ) else (
-  call gradlew.bat bundleRelease
+  call gradlew.bat bundleRelease "-DCMAKE_OBJECT_PATH_MAX=5000"
 )
 set "BUILD_EXIT_CODE=%ERRORLEVEL%"
 popd
