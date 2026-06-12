@@ -35,5 +35,6 @@ rootProject.name = 'Marcador de Pontos'
 
 expoAutolinking.useExpoVersionCatalog()
 
+
 include ':app'
 includeBuild(expoAutolinking.reactNativeGradlePlugin)

@@ -41,11 +41,12 @@ if defined KEYSTORE_PATH (
 
 echo.
 echo Iniciando build Android para Play Store...
+set "NODE_ENV=production"
 pushd "%~dp0android"
 if defined KEYSTORE_PATH (
-  call gradlew.bat bundleRelease "-PMYAPP_UPLOAD_STORE_FILE=%KEYSTORE_PATH%"
+  call gradlew.bat bundleRelease "-PMYAPP_UPLOAD_STORE_FILE=%KEYSTORE_PATH%" "-DCMAKE_OBJECT_PATH_MAX=5000"
 ) else (
-  call gradlew.bat bundleRelease
+  call gradlew.bat bundleRelease "-DCMAKE_OBJECT_PATH_MAX=5000"
 )
 set "BUILD_EXIT_CODE=%ERRORLEVEL%"
 popd
@@ -59,7 +60,13 @@ if not "%BUILD_EXIT_CODE%"=="0" (
 echo.
 echo Build concluido com sucesso.
 
-set "AAB_DIR=%~dp0android\app\build\outputs\bundle\release"
+set "AAB_DIR=%~dp0.build\app\outputs\bundle\release"
+if not exist "%AAB_DIR%" (
+  set "AAB_DIR=%~dp0.build\outputs\bundle\release"
+)
+if not exist "%AAB_DIR%" (
+  set "AAB_DIR=%~dp0android\app\build\outputs\bundle\release"
+)
 if exist "%AAB_DIR%" (
   echo Abrindo pasta do AAB: %AAB_DIR%
   start "" "%AAB_DIR%"

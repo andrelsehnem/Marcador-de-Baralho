@@ -36,3 +36,6 @@ local.properties
 
 PLAY_STORE_RELEASE_NOTES_2.0.10.txt
 .expo/
+.build/
+.build/intermediates/
+.build/generated/

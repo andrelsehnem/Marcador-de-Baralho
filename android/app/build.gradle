@@ -4,6 +4,10 @@ apply plugin: "com.facebook.react"
 
 def projectRoot = rootDir.getAbsoluteFile().getParentFile().getAbsolutePath()
 
+// Mover build para pasta com caminho mais curto, mantendo os outputs do app isolados.
+// Comentado: Causa problemas de dependência implícita no Gradle 8.14+
+// layout.buildDirectory = file("../../.build/app")
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -82,12 +86,13 @@ def enableMinifyInReleaseBuilds = (findProperty('android.enableMinifyInReleaseBu
 def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
 
 android {
-    ndkVersion rootProject.ext.ndkVersion
+    ndkVersion = rootProject.ext.ndkVersion
 
-    buildToolsVersion rootProject.ext.buildToolsVersion
-    compileSdk rootProject.ext.compileSdkVersion
+    buildToolsVersion = rootProject.ext.buildToolsVersion
+    compileSdk = rootProject.ext.compileSdkVersion
 
-    namespace 'dev.andre100.marcadorPontos'
+    namespace = 'dev.andre100.marcadorPontos'
+    
     defaultConfig {
         applicationId 'dev.andre100.marcadorPontos'
         minSdkVersion rootProject.ext.minSdkVersion
@@ -99,43 +104,63 @@ android {
     }
     signingConfigs {
         debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
+            storeFile = file('debug.keystore')
+            storePassword = 'android'
+            keyAlias = 'androiddebugkey'
+            keyPassword = 'android'
         }
         release {
-            storeFile file('marcador.keystore')
-            storePassword 'w9Tkt@66'
-            keyAlias 'marcador'
-            keyPassword 'w9Tkt@66'
+            def releaseStoreFile = rootProject.file(findProperty('RELEASE_STORE_FILE') ?: 'marcador.keystore')
+            storeFile = releaseStoreFile
+            storePassword = findProperty('RELEASE_STORE_PASSWORD') ?: ''
+            keyAlias = findProperty('RELEASE_KEY_ALIAS') ?: 'marcador'
+            keyPassword = findProperty('RELEASE_KEY_PASSWORD') ?: ''
         }
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.debug
+            signingConfig = signingConfigs.debug
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
             signingConfig signingConfigs.release
             def enableShrinkResources = findProperty('android.enableShrinkResourcesInReleaseBuilds') ?: 'false'
-            shrinkResources enableShrinkResources.toBoolean()
-            minifyEnabled enableMinifyInReleaseBuilds
+            shrinkResources = enableShrinkResources.toBoolean()
+            minifyEnabled = enableMinifyInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             def enablePngCrunchInRelease = findProperty('android.enablePngCrunchInReleaseBuilds') ?: 'true'
-            crunchPngs enablePngCrunchInRelease.toBoolean()
+            crunchPngs = enablePngCrunchInRelease.toBoolean()
         }
     }
     packagingOptions {
         jniLibs {
             def enableLegacyPackaging = findProperty('expo.useLegacyPackaging') ?: 'false'
-            useLegacyPackaging enableLegacyPackaging.toBoolean()
+            useLegacyPackaging = enableLegacyPackaging.toBoolean()
         }
     }
     androidResources {
-        ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~'
+        ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~'
     }
+    externalNativeBuild {
+        cmake {
+            path = file("../CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
+    defaultConfig {
+        externalNativeBuild {
+            cmake {
+                arguments "-DCMAKE_OBJECT_PATH_MAX=5000", "-DANDROID_STL=c++_shared"
+            }
+        }
+    }
+}
+
+tasks.matching { it.name == "createBundleReleaseJsAndAssets" }.configureEach {
+    dependsOn("generateReactNativeEntryPoint")
+    dependsOn("generateAutolinkingNewArchitectureFiles")
+    dependsOn("generateAutolinkingPackageList")
 }
 
 // Apply static values from `gradle.properties` to the `android.packagingOptions`
