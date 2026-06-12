@@ -2,12 +2,12 @@
   "expo": {
     "name": "Marcador de Pontos",
     "slug": "marcador-de-baralho",
-    "version": "2.0.16",
+    "version": "2.0.18",
     "icon": "./assets/icons/playstore.png",
     "assetBundlePatterns": [
       "**/*"
     ],
-    "schemes": [
+    "scheme": [
       "myapp"
     ],
     "web": {
@@ -22,15 +22,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/icons/playstore.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "navigationBar": {
-        "visible": "immersive"
-      },
-      "googleMobileAdsAppId": "ca-app-pub-7478664676745892~3869488742"
+      }
     },
-    "ios": {
-      "googleMobileAdsAppId": "ca-app-pub-7478664676745892~3869488742"
-    },
+    "ios": {},
     "plugins": [
       [
         "react-native-google-mobile-ads",
@@ -38,12 +32,9 @@
           "androidAppId": "ca-app-pub-7478664676745892~3869488742",
           "iosAppId": "ca-app-pub-7478664676745892~3869488742"
         }
-      ]
+      ],
+      "expo-router"
     ],
-    "react-native-google-mobile-ads": {
-      "android_app_id": "ca-app-pub-7478664676745892~3869488742",
-      "ios_app_id": "ca-app-pub-7478664676745892~3869488742"
-    },
     "extra": {
       "eas": {
         "projectId": "c7c0c4cd-650e-4e97-8656-c462dce3c3d1"
