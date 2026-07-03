@@ -64,7 +64,10 @@ export const RemoveAdsPurchaseButton: React.FC<RemoveAdsPurchaseButtonProps> = (
           <Text style={[styles.buttonText, { color: textColor }, textStyle]}>
             🔥 Remover Anúncios
           </Text>
-          <Text style={[styles.subtitleText, { color: subtitleColor }]}>Pague menos agora</Text>
+          <View style={styles.priceRow}>
+            <Text style={[styles.oldPriceText, { color: subtitleColor }]}>R$4,99</Text>
+            <Text style={[styles.newPriceText, { color: colors.warning }]}>R$0,99</Text>
+          </View>
         </View>
       )}
     </TouchableOpacity>
@@ -85,7 +88,7 @@ const styles = StyleSheet.create({
     elevation: 8,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '700',
   },
   contentContainer: {
@@ -102,8 +105,18 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     letterSpacing: 0.6,
   },
-  subtitleText: {
-    fontSize: 12,
-    fontWeight: '600',
+  priceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  oldPriceText: {
+    fontSize: 13,
+    textDecorationLine: 'line-through',
+    opacity: 0.7,
+  },
+  newPriceText: {
+    fontSize: 20,
+    fontWeight: '800',
   },
 });
