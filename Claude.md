@@ -1,0 +1,1 @@
+Antes de iniciar leia `.github\copilot-instructions.md`
