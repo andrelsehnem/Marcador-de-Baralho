@@ -4,6 +4,17 @@ apply plugin: "com.facebook.react"
 
 def projectRoot = rootDir.getAbsoluteFile().getParentFile().getAbsolutePath()
 
+// Carregar credenciais de assinatura de local.properties (não versionado).
+// O Gradle não lê local.properties como project properties automaticamente.
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream { localProperties.load(it) }
+}
+def releaseProp = { String name, String fallback ->
+    localProperties.getProperty(name) ?: (findProperty(name) ?: fallback)
+}
+
 // Mover build para pasta com caminho mais curto, mantendo os outputs do app isolados.
 // Comentado: Causa problemas de dependência implícita no Gradle 8.14+
 // layout.buildDirectory = file("../../.build/app")
@@ -97,8 +108,8 @@ android {
         applicationId 'dev.andre100.marcadorPontos'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 19
-        versionName "2.0.19"
+        versionCode 21
+        versionName "2.0.21"
 
         buildConfigField "String", "REACT_NATIVE_RELEASE_LEVEL", "\"${findProperty('reactNativeReleaseLevel') ?: 'stable'}\""
     }
@@ -110,11 +121,11 @@ android {
             keyPassword = 'android'
         }
         release {
-            def releaseStoreFile = rootProject.file(findProperty('RELEASE_STORE_FILE') ?: 'marcador.keystore')
+            def releaseStoreFile = rootProject.file(releaseProp('RELEASE_STORE_FILE', 'marcador.keystore'))
             storeFile = releaseStoreFile
-            storePassword = findProperty('RELEASE_STORE_PASSWORD') ?: ''
-            keyAlias = findProperty('RELEASE_KEY_ALIAS') ?: 'marcador'
-            keyPassword = findProperty('RELEASE_KEY_PASSWORD') ?: ''
+            storePassword = releaseProp('RELEASE_STORE_PASSWORD', '')
+            keyAlias = releaseProp('RELEASE_KEY_ALIAS', 'marcador')
+            keyPassword = releaseProp('RELEASE_KEY_PASSWORD', '')
         }
     }
     buildTypes {
@@ -142,16 +153,23 @@ android {
     androidResources {
         ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~'
     }
+    // NÃO definir um CMakeLists.txt customizado aqui: o React Native Gradle Plugin
+    // injeta o seu próprio (ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt),
+    // que constrói libappmodules.so e registra os TurboModules core (PlatformConstants etc).
+    // Fixamos um CMake mais novo (ninja "long-path aware") para evitar o limite de
+    // 260 chars do Windows no build nativo (requer LongPathsEnabled=1 no registro).
     externalNativeBuild {
         cmake {
-            path = file("../CMakeLists.txt")
-            version = "3.22.1"
+            version = "3.31.6"
         }
     }
+    // Apenas passamos argumentos adicionais (aditivos) para o CMake do RN.
     defaultConfig {
         externalNativeBuild {
             cmake {
-                arguments "-DCMAKE_OBJECT_PATH_MAX=5000", "-DANDROID_STL=c++_shared"
+                // Valor BAIXO força o CMake a encurtar (hash) caminhos de objeto,
+                // evitando o limite de 260 chars do Windows no ninja/NDK.
+                arguments "-DCMAKE_OBJECT_PATH_MAX=180", "-DANDROID_STL=c++_shared"
             }
         }
     }

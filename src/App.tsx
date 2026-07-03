@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { activateKeepAwake } from 'expo-keep-awake';
+import { useKeepAwake } from 'expo-keep-awake';
 import { ThemeProvider } from './shared/contexts/ThemeContext';
 import { PurchaseProvider } from './shared/contexts/PurchaseContext';
 import HomeScreen from './mobile/screens/HomeScreen';
@@ -12,9 +12,10 @@ import { initializeAdMob } from './shared/services/admob';
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'truco' | 'cacheta' | 'marcador'>('home');
 
+  // Manter a tela acordada enquanto o app estiver aberto (lock liberado ao desmontar)
+  useKeepAwake();
+
   useEffect(() => {
-    // Manter tela acordada durante toda a utilização do app
-    activateKeepAwake();
     // Inicializar AdMob quando o app carrega
     initializeAdMob();
   }, []);

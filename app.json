@@ -2,7 +2,7 @@
   "expo": {
     "name": "Marcador de Pontos",
     "slug": "marcador-de-baralho",
-    "version": "2.0.19",
+    "version": "2.0.21",
     "icon": "./assets/icons/playstore.png",
     "assetBundlePatterns": [
       "**/*"

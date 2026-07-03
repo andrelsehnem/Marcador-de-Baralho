@@ -28,6 +28,9 @@ importers:
       expo-dev-client:
         specifier: ~56.0.20
         version: 56.0.20
+      expo-keep-awake:
+        specifier: ~56.0.3
+        version: 56.0.3
       expo-linking:
         specifier: ~56.0.14
         version: 56.0.14

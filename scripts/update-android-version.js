@@ -38,8 +38,8 @@ const writeJson = (filePath, content) => {
 };
 
 const readBuildVersions = (buildGradleContent) => {
-  const versionCodeMatch = buildGradleContent.match(/versionCode\s*=\s*(\d+)/);
-  const versionNameMatch = buildGradleContent.match(/versionName\s*=\s*"([^"]+)"/);
+  const versionCodeMatch = buildGradleContent.match(/versionCode\s*=?\s*(\d+)/);
+  const versionNameMatch = buildGradleContent.match(/versionName\s*=?\s*"([^"]+)"/);
 
   if (!versionCodeMatch || !versionNameMatch) {
     throw new Error('Não foi possível localizar versionCode/versionName em android/app/build.gradle');
@@ -52,8 +52,8 @@ const readBuildVersions = (buildGradleContent) => {
 };
 
 const updateBuildGradle = (buildGradleContent, versionCode, versionName) => {
-  const withCode = buildGradleContent.replace(/versionCode\s*=\s*\d+/, `versionCode = ${versionCode}`);
-  return withCode.replace(/versionName\s*=\s*"[^"]+"/, `versionName = "${versionName}"`);
+  const withCode = buildGradleContent.replace(/versionCode(\s*=?\s*)\d+/, `versionCode$1${versionCode}`);
+  return withCode.replace(/versionName(\s*=?\s*)"[^"]+"/, `versionName$1"${versionName}"`);
 };
 
 const createPrompter = () => {
