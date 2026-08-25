@@ -1,0 +1,2010 @@
+﻿Starting a Gradle Daemon, 2 stopped Daemons could not be reused, use --status for details
+> Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:shared:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileJava NO-SOURCE
+> Task :gradle-plugin:shared:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:processResources NO-SOURCE
+> Task :gradle-plugin:shared:processResources NO-SOURCE
+> Task :gradle-plugin:shared:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:classes UP-TO-DATE
+> Task :gradle-plugin:shared:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:jar UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:settings-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-dev-launcher-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-module-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-dev-launcher-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-module-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-dev-launcher-gradle-plugin:processResources UP-TO-DATE
+> Task :expo-module-gradle-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-max-sdk-override-plugin:jar UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:jar UP-TO-DATE
+> Task :expo-dev-launcher-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :expo-dev-launcher-gradle-plugin:compileJava NO-SOURCE
+> Task :expo-dev-launcher-gradle-plugin:classes UP-TO-DATE
+> Task :expo-module-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :expo-dev-launcher-gradle-plugin:jar UP-TO-DATE
+> Task :expo-module-gradle-plugin:compileJava NO-SOURCE
+> Task :expo-module-gradle-plugin:classes UP-TO-DATE
+> Task :expo-module-gradle-plugin:jar UP-TO-DATE
+
+> Configure project :
+[32m[ExpoRootProject][0m Using the following versions:
+  - buildTools:  [32m36.0.0[0m
+  - minSdk:      [32m24[0m
+  - compileSdk:  [32m36[0m
+  - targetSdk:   [32m36[0m
+  - ndk:         [32m27.1.12297006[0m
+  - kotlin:      [32m2.1.20[0m
+  - ksp:         [32m2.1.20-2.0.1[0m
+
+> Configure project :app
+ ℹ️  [33mApplying gradle plugin[0m '[32mexpo-max-sdk-override-plugin[0m'
+  [expo-max-sdk-override-plugin] This plugin will find all permissions declared with `android:maxSdkVersion`. If there exists a declaration with the `android:maxSdkVersion` annotation and another one without, the plugin will remove the annotation from the final merged manifest. In order to see a log with the changes run a clean build of the app.
+ ℹ️  [33mApplying gradle plugin[0m '[32mexpo-dev-launcher-gradle-plugin[0m'
+
+> Configure project :expo
+
+Using expo modules
+  - [32mexpo-log-box[0m (56.0.13)
+  - [32mexpo-constants[0m (56.0.18)
+  - [32mexpo-dev-client[0m (56.0.20)
+  - [32mexpo-dev-launcher[0m (56.0.20)
+  - [32mexpo-dev-menu[0m (56.0.17)
+  - [32mexpo-dev-menu-interface[0m (56.0.1)
+  - [32mexpo-json-utils[0m (56.0.0)
+  - [32mexpo-manifests[0m (56.0.4)
+
+> Configure project :expo-modules-core
+Linking react-native-worklets native libs into expo-modules-core build tasks
+task ':react-native-worklets:mergeDebugNativeLibs'
+task ':react-native-worklets:mergeReleaseNativeLibs'
+
+> Configure project :expo
+  - [32mexpo-modules-core[0m (56.0.16)
+  - [32mexpo-updates-interface[0m (56.0.2)
+  - [33m[📦][0m [32mexpo-dom-webview[0m (56.0.5)
+  - [33m[📦][0m [32mexpo-ui[0m (56.0.17)
+  - [33m[📦][0m [32mexpo-asset[0m (56.0.17)
+  - [33m[📦][0m [32mexpo-file-system[0m (56.0.8)
+  - [33m[📦][0m [32mexpo-font[0m (56.0.6)
+  - [33m[📦][0m [32mexpo-keep-awake[0m (56.0.3)
+  - [33m[📦][0m [32mexpo-linking[0m (56.0.14)
+  - [33m[📦][0m [32mexpo-navigation-bar[0m (56.0.3)
+  - [33m[📦][0m [32mexpo-router[0m (56.2.10)
+  - [33m[📦][0m [32mexpo-screen-orientation[0m (56.0.5)
+  - [33m[📦][0m [32mexpo-status-bar[0m (56.0.4)
+
+
+> Configure project :react-native-google-mobile-ads
+:react-native-google-mobile-ads package.json found at E:\Dev\MDB\node_modules\.pnpm\react-native-google-mobile-_83db0d3f7ebd09363be72ba792248997\node_modules\react-native-google-mobile-ads\package.json
+
+
+
+
+**************************************************************************************************************
+
+
+
+
+WARNING: react-native-google-mobile-ads requires an 'android_app_id' property inside a 'react-native-google-mobile-ads' key in your app.json.
+         No android_app_id property was found in this location. The native Google Mobile Ads SDK will crash on startup without it.
+         You can safely ignore this warning if you are using our Expo config plugin.
+
+
+
+
+**************************************************************************************************************
+
+
+
+
+:react-native-google-mobile-ads package.json found at E:\Dev\MDB\node_modules\.pnpm\react-native-google-mobile-_83db0d3f7ebd09363be72ba792248997\node_modules\react-native-google-mobile-ads\package.json
+:react-native-google-mobile-ads:version set from package.json: 16.3.3 (16,3,3 - 16003003)
+:react-native-google-mobile-ads:android.compileSdk using custom value: 36
+:react-native-google-mobile-ads:android.targetSdk using custom value: 36
+:react-native-google-mobile-ads:android.minSdk using custom value: 24
+:react-native-google-mobile-ads:reactNativeAndroidDir E:\Dev\MDB\node_modules\react-native
+
+> Configure project :react-native-iap
+[NitroModules] 🔥 NitroIap is boosted by nitro!
+
+> Task :expo-updates-interface:preBuild UP-TO-DATE
+> Task :expo-dev-launcher:preBuild UP-TO-DATE
+> Task :expo-manifests:preBuild UP-TO-DATE
+> Task :expo-modules-core:preBuild UP-TO-DATE
+> Task :expo-dev-menu:preBuild UP-TO-DATE
+> Task :expo-log-box:preBuild UP-TO-DATE
+> Task :expo-json-utils:preBuild UP-TO-DATE
+> Task :expo-dev-client:preBuild UP-TO-DATE
+> Task :expo-dev-menu-interface:preBuild UP-TO-DATE
+> Task :react-native-iap:preBuild UP-TO-DATE
+> Task :react-native-masked-view_masked-view:preBuild UP-TO-DATE
+> Task :expo-dev-client:preReleaseBuild UP-TO-DATE
+> Task :expo-dev-launcher:preReleaseBuild UP-TO-DATE
+> Task :expo-dev-launcher:generateReleaseResValues UP-TO-DATE
+> Task :expo-dev-client:generateReleaseResValues UP-TO-DATE
+> Task :expo:generatePackagesList UP-TO-DATE
+> Task :expo:preBuild UP-TO-DATE
+> Task :expo:preReleaseBuild UP-TO-DATE
+> Task :expo:generateReleaseResValues UP-TO-DATE
+> Task :expo-dev-client:generateReleaseResources UP-TO-DATE
+> Task :react-native-google-mobile-ads:generateCodegenSchemaFromJavaScript UP-TO-DATE
+> Task :react-native-safe-area-context:generateCodegenSchemaFromJavaScript UP-TO-DATE
+> Task :react-native-async-storage_async-storage:generateCodegenSchemaFromJavaScript UP-TO-DATE
+> Task :react-native-gesture-handler:generateCodegenSchemaFromJavaScript UP-TO-DATE
+> Task :expo-dev-launcher:generateReleaseResources UP-TO-DATE
+> Task :react-native-screens:generateCodegenSchemaFromJavaScript UP-TO-DATE
+> Task :expo:generateReleaseResources UP-TO-DATE
+> Task :react-native-gesture-handler:generateCodegenArtifactsFromSchema UP-TO-DATE
+> Task :expo-dev-client:packageReleaseResources UP-TO-DATE
+> Task :expo-dev-launcher:packageReleaseResources UP-TO-DATE
+> Task :react-native-safe-area-context:generateCodegenArtifactsFromSchema UP-TO-DATE
+> Task :react-native-async-storage_async-storage:generateCodegenArtifactsFromSchema UP-TO-DATE
+> Task :expo-dev-menu:preReleaseBuild UP-TO-DATE
+> Task :expo-dev-menu-interface:preReleaseBuild UP-TO-DATE
+> Task :react-native-google-mobile-ads:generateCodegenArtifactsFromSchema UP-TO-DATE
+> Task :expo:packageReleaseResources UP-TO-DATE
+> Task :react-native-gesture-handler:preBuild UP-TO-DATE
+> Task :react-native-google-mobile-ads:preBuild UP-TO-DATE
+> Task :react-native-async-storage_async-storage:preBuild UP-TO-DATE
+> Task :expo-log-box:preReleaseBuild UP-TO-DATE
+> Task :expo-json-utils:preReleaseBuild UP-TO-DATE
+> Task :expo-dev-menu-interface:generateReleaseResValues UP-TO-DATE
+> Task :expo-manifests:preReleaseBuild UP-TO-DATE
+> Task :react-native-safe-area-context:preBuild UP-TO-DATE
+> Task :expo-modules-core:preReleaseBuild UP-TO-DATE
+> Task :expo-updates-interface:preReleaseBuild UP-TO-DATE
+> Task :expo-dev-menu:generateReleaseResValues UP-TO-DATE
+> Task :expo-json-utils:generateReleaseResValues UP-TO-DATE
+> Task :expo-manifests:generateReleaseResValues UP-TO-DATE
+> Task :expo-updates-interface:generateReleaseResValues UP-TO-DATE
+> Task :expo-modules-core:generateReleaseResValues UP-TO-DATE
+> Task :react-native-screens:generateCodegenArtifactsFromSchema UP-TO-DATE
+> Task :expo-dev-menu-interface:generateReleaseResources UP-TO-DATE
+> Task :react-native-screens:preBuild UP-TO-DATE
+> Task :expo-json-utils:generateReleaseResources UP-TO-DATE
+> Task :react-native-async-storage_async-storage:preReleaseBuild UP-TO-DATE
+> Task :expo-dev-menu:generateReleaseResources UP-TO-DATE
+> Task :expo-updates-interface:generateReleaseResources UP-TO-DATE
+> Task :expo-manifests:generateReleaseResources UP-TO-DATE
+> Task :expo-modules-core:generateReleaseResources UP-TO-DATE
+> Task :react-native-async-storage_async-storage:generateReleaseResValues UP-TO-DATE
+> Task :expo-dev-menu-interface:packageReleaseResources UP-TO-DATE
+> Task :react-native-async-storage_async-storage:generateReleaseResources UP-TO-DATE
+> Task :react-native-gesture-handler:preReleaseBuild UP-TO-DATE
+> Task :expo-json-utils:packageReleaseResources UP-TO-DATE
+> Task :expo-dev-menu:packageReleaseResources UP-TO-DATE
+> Task :react-native-gesture-handler:generateReleaseResValues UP-TO-DATE
+> Task :expo-updates-interface:packageReleaseResources UP-TO-DATE
+> Task :expo-modules-core:packageReleaseResources UP-TO-DATE
+> Task :react-native-google-mobile-ads:preReleaseBuild UP-TO-DATE
+> Task :react-native-iap:preReleaseBuild UP-TO-DATE
+> Task :expo-manifests:packageReleaseResources UP-TO-DATE
+> Task :react-native-safe-area-context:preReleaseBuild UP-TO-DATE
+> Task :react-native-masked-view_masked-view:preReleaseBuild UP-TO-DATE
+> Task :react-native-screens:preReleaseBuild UP-TO-DATE
+> Task :react-native-google-mobile-ads:generateReleaseResValues UP-TO-DATE
+> Task :react-native-iap:generateReleaseResValues UP-TO-DATE
+> Task :react-native-gesture-handler:generateReleaseResources UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseResValues UP-TO-DATE
+> Task :react-native-masked-view_masked-view:generateReleaseResValues UP-TO-DATE
+> Task :react-native-screens:generateReleaseResValues UP-TO-DATE
+> Task :react-native-iap:generateReleaseResources UP-TO-DATE
+> Task :react-native-async-storage_async-storage:packageReleaseResources UP-TO-DATE
+> Task :react-native-masked-view_masked-view:generateReleaseResources UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseResources UP-TO-DATE
+> Task :expo:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-gesture-handler:packageReleaseResources UP-TO-DATE
+> Task :react-native-iap:packageReleaseResources UP-TO-DATE
+> Task :react-native-screens:generateReleaseResources UP-TO-DATE
+> Task :react-native-masked-view_masked-view:packageReleaseResources UP-TO-DATE
+> Task :react-native-safe-area-context:packageReleaseResources UP-TO-DATE
+> Task :expo-dev-client:extractDeepLinksRelease UP-TO-DATE
+> Task :expo:processReleaseManifest UP-TO-DATE
+> Task :expo-dev-launcher:extractDeepLinksRelease UP-TO-DATE
+> Task :expo-dev-menu:extractDeepLinksRelease UP-TO-DATE
+> Task :expo-dev-menu-interface:extractDeepLinksRelease UP-TO-DATE
+> Task :expo-json-utils:extractDeepLinksRelease UP-TO-DATE
+> Task :expo-dev-client:processReleaseManifest UP-TO-DATE
+> Task :expo-dev-menu:processReleaseManifest UP-TO-DATE
+> Task :expo-dev-menu-interface:processReleaseManifest UP-TO-DATE
+> Task :expo-dev-launcher:processReleaseManifest UP-TO-DATE
+> Task :expo-manifests:extractDeepLinksRelease UP-TO-DATE
+> Task :expo-modules-core:extractDeepLinksRelease UP-TO-DATE
+> Task :expo-updates-interface:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-screens:packageReleaseResources UP-TO-DATE
+> Task :expo-json-utils:processReleaseManifest UP-TO-DATE
+> Task :expo-manifests:processReleaseManifest UP-TO-DATE
+> Task :react-native-iap:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-gesture-handler:extractDeepLinksRelease UP-TO-DATE
+> Task :expo-modules-core:processReleaseManifest UP-TO-DATE
+> Task :react-native-masked-view_masked-view:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:processReleaseManifest UP-TO-DATE
+> Task :expo-updates-interface:processReleaseManifest UP-TO-DATE
+> Task :react-native-safe-area-context:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-gesture-handler:processReleaseManifest UP-TO-DATE
+> Task :react-native-screens:extractDeepLinksRelease UP-TO-DATE
+> Task :expo:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-iap:processReleaseManifest UP-TO-DATE
+> Task :react-native-masked-view_masked-view:processReleaseManifest UP-TO-DATE
+> Task :expo-dev-client:writeReleaseAarMetadata UP-TO-DATE
+> Task :expo-dev-launcher:writeReleaseAarMetadata UP-TO-DATE
+> Task :expo-dev-menu-interface:writeReleaseAarMetadata UP-TO-DATE
+> Task :expo-dev-menu:writeReleaseAarMetadata UP-TO-DATE
+> Task :expo-json-utils:writeReleaseAarMetadata UP-TO-DATE
+> Task :expo-manifests:writeReleaseAarMetadata UP-TO-DATE
+> Task :expo-modules-core:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-safe-area-context:processReleaseManifest UP-TO-DATE
+> Task :expo-updates-interface:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-async-storage_async-storage:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-screens:processReleaseManifest UP-TO-DATE
+> Task :react-native-gesture-handler:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-iap:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-masked-view_masked-view:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-safe-area-context:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-screens:writeReleaseAarMetadata UP-TO-DATE
+> Task :expo-dev-client:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-dev-launcher:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-dev-menu:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-dev-menu-interface:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-json-utils:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-json-utils:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-dev-menu:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-dev-launcher:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-dev-menu-interface:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-dev-client:parseReleaseLocalResources UP-TO-DATE
+> Task :expo:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-dev-menu-interface:generateReleaseRFile UP-TO-DATE
+> Task :expo-dev-client:generateReleaseRFile UP-TO-DATE
+> Task :expo-dev-menu:generateReleaseRFile UP-TO-DATE
+> Task :expo-json-utils:generateReleaseRFile UP-TO-DATE
+> Task :expo-dev-launcher:generateReleaseRFile UP-TO-DATE
+> Task :expo:generateReleaseRFile UP-TO-DATE
+> Task :expo-log-box:generateReleaseResValues UP-TO-DATE
+> Task :react-native-google-mobile-ads:generateReleaseResources UP-TO-DATE
+> Task :expo-modules-core:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-gesture-handler:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-manifests:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-updates-interface:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-async-storage_async-storage:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-iap:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-log-box:generateReleaseResources UP-TO-DATE
+> Task :expo-manifests:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-gesture-handler:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-modules-core:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-updates-interface:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-async-storage_async-storage:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-iap:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-google-mobile-ads:packageReleaseResources UP-TO-DATE
+> Task :react-native-gesture-handler:generateReleaseRFile UP-TO-DATE
+> Task :expo-manifests:generateReleaseRFile UP-TO-DATE
+> Task :expo-modules-core:generateReleaseRFile UP-TO-DATE
+> Task :expo-updates-interface:generateReleaseRFile UP-TO-DATE
+> Task :react-native-google-mobile-ads:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-gesture-handler:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-safe-area-context:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-iap:generateReleaseRFile UP-TO-DATE
+> Task :expo-log-box:packageReleaseResources UP-TO-DATE
+> Task :react-native-async-storage_async-storage:generateReleaseRFile UP-TO-DATE
+> Task :expo:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-iap:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-masked-view_masked-view:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-log-box:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-gesture-handler:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-safe-area-context:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-google-mobile-ads:processReleaseManifest UP-TO-DATE
+> Task :expo:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-modules-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-iap:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-google-mobile-ads:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-gesture-handler:javaPreCompileRelease UP-TO-DATE
+> Task :expo-modules-core:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-dev-client:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-google-mobile-ads:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-masked-view_masked-view:generateReleaseRFile UP-TO-DATE
+> Task :expo-dev-launcher:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-modules-core:javaPreCompileRelease UP-TO-DATE
+> Task :expo-dev-menu:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-google-mobile-ads:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-log-box:processReleaseManifest UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseRFile UP-TO-DATE
+> Task :react-native-safe-area-context:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-log-box:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-screens:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-dev-menu:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-log-box:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-google-mobile-ads:generateReleaseRFile UP-TO-DATE
+> Task :react-native-screens:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-google-mobile-ads:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-dev-menu:javaPreCompileRelease UP-TO-DATE
+> Task :expo-dev-menu-interface:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-log-box:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-google-mobile-ads:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-dev-menu-interface:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-screens:generateReleaseRFile UP-TO-DATE
+> Task :expo-dev-menu-interface:javaPreCompileRelease UP-TO-DATE
+> Task :expo-log-box:generateReleaseRFile UP-TO-DATE
+> Task :expo-json-utils:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-screens:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-json-utils:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-log-box:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-json-utils:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-screens:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-log-box:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-log-box:javaPreCompileRelease UP-TO-DATE
+> Task :expo-manifests:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-updates-interface:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-updates-interface:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-manifests:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-updates-interface:javaPreCompileRelease UP-TO-DATE
+> Task :expo-manifests:javaPreCompileRelease UP-TO-DATE
+> Task :expo:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-masked-view_masked-view:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-async-storage_async-storage:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-worklets:assertMinimalReactNativeVersionTask
+> Task :react-native-worklets:assertNewArchitectureEnabledTask SKIPPED
+> Task :react-native-worklets:generateCodegenSchemaFromJavaScript UP-TO-DATE
+> Task :react-native-reanimated:assertMinimalReactNativeVersionTask
+> Task :react-native-reanimated:assertNewArchitectureEnabledTask SKIPPED
+> Task :react-native-worklets:generateCodegenArtifactsFromSchema UP-TO-DATE
+> Task :react-native-worklets:prepareWorkletsHeadersForPrefabs UP-TO-DATE
+> Task :react-native-worklets:preBuild
+> Task :react-native-worklets:preReleaseBuild
+> Task :react-native-worklets:generateReleaseResValues UP-TO-DATE
+> Task :react-native-worklets:generateReleaseResources UP-TO-DATE
+> Task :react-native-worklets:packageReleaseResources UP-TO-DATE
+> Task :react-native-worklets:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-worklets:processReleaseManifest UP-TO-DATE
+> Task :react-native-worklets:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-worklets:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-worklets:parseReleaseLocalResources UP-TO-DATE
+> Task :react-native-worklets:generateReleaseRFile UP-TO-DATE
+> Task :react-native-worklets:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-worklets:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-worklets:compileReleaseKotlin NO-SOURCE
+> Task :react-native-worklets:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-reanimated:assertWorkletsVersionTask
+> Task :react-native-reanimated:generateCodegenSchemaFromJavaScript UP-TO-DATE
+> Task :react-native-reanimated:generateCodegenArtifactsFromSchema UP-TO-DATE
+
+> Task :expo-constants:createExpoConfig
+
+.\gradlew.bat : The NODE_ENV environment variable is required but was not specified. Ensure the project is bundled 
+with Expo CLI or NODE_ENV is set. Using only .env.local and .env
+No linha:1 caractere:26
++ cd "e:\Dev\MDB\android"; .\gradlew.bat bundleRelease 2>&1 | Out-File  ...
++                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (The NODE_ENV en....local and .env:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+> Task :expo-constants:preBuild
+> Task :expo-constants:preReleaseBuild
+> Task :expo-constants:generateReleaseResValues UP-TO-DATE
+> Task :expo-constants:generateReleaseResources UP-TO-DATE
+> Task :react-native-reanimated:prepareReanimatedHeadersForPrefabs UP-TO-DATE
+> Task :expo-constants:packageReleaseResources UP-TO-DATE
+> Task :react-native-reanimated:preBuild
+> Task :react-native-reanimated:preReleaseBuild
+> Task :react-native-reanimated:generateReleaseResValues UP-TO-DATE
+> Task :expo-constants:extractDeepLinksRelease UP-TO-DATE
+> Task :react-native-reanimated:generateReleaseResources UP-TO-DATE
+> Task :expo-constants:processReleaseManifest UP-TO-DATE
+> Task :expo-constants:writeReleaseAarMetadata UP-TO-DATE
+> Task :expo-constants:compileReleaseLibraryResources UP-TO-DATE
+> Task :expo-constants:parseReleaseLocalResources UP-TO-DATE
+> Task :expo-constants:generateReleaseRFile UP-TO-DATE
+> Task :react-native-worklets:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :expo-constants:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-constants:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-worklets:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :expo-constants:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-worklets:bundleLibRuntimeToDirRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:bundleLibRuntimeToDirRelease UP-TO-DATE
+> Task :react-native-reanimated:packageReleaseResources UP-TO-DATE
+> Task :react-native-async-storage_async-storage:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-reanimated:extractDeepLinksRelease UP-TO-DATE
+> Task :expo-dev-client:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:bundleLibRuntimeToDirRelease UP-TO-DATE
+> Task :react-native-reanimated:processReleaseManifest UP-TO-DATE
+> Task :react-native-masked-view_masked-view:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :react-native-reanimated:writeReleaseAarMetadata UP-TO-DATE
+> Task :react-native-reanimated:compileReleaseLibraryResources UP-TO-DATE
+> Task :react-native-reanimated:parseReleaseLocalResources UP-TO-DATE
+> Task :expo:mergeReleaseShaders UP-TO-DATE
+> Task :expo:compileReleaseShaders NO-SOURCE
+> Task :expo:generateReleaseAssets UP-TO-DATE
+> Task :expo-constants:mergeReleaseShaders UP-TO-DATE
+> Task :expo-constants:compileReleaseShaders NO-SOURCE
+> Task :expo-constants:generateReleaseAssets UP-TO-DATE
+> Task :expo-constants:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:generateReleaseRFile UP-TO-DATE
+> Task :expo-dev-menu:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-reanimated:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-dev-menu:compileReleaseShaders NO-SOURCE
+> Task :react-native-reanimated:javaPreCompileRelease UP-TO-DATE
+> Task :expo-dev-menu:generateReleaseAssets UP-TO-DATE
+> Task :expo-dev-menu-interface:mergeReleaseShaders UP-TO-DATE
+> Task :expo-dev-menu-interface:compileReleaseShaders NO-SOURCE
+> Task :expo-dev-menu-interface:generateReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :expo-dev-menu:mergeReleaseAssets UP-TO-DATE
+> Task :expo-dev-menu-interface:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :expo-json-utils:mergeReleaseShaders UP-TO-DATE
+> Task :expo-json-utils:compileReleaseShaders NO-SOURCE
+> Task :expo-log-box:mergeReleaseShaders UP-TO-DATE
+> Task :expo-json-utils:generateReleaseAssets UP-TO-DATE
+> Task :expo-json-utils:mergeReleaseAssets UP-TO-DATE
+> Task :expo-log-box:compileReleaseShaders NO-SOURCE
+> Task :expo-log-box:generateReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:bundleLibRuntimeToDirRelease UP-TO-DATE
+> Task :expo-log-box:mergeReleaseAssets UP-TO-DATE
+> Task :expo-manifests:mergeReleaseShaders UP-TO-DATE
+> Task :expo-manifests:compileReleaseShaders NO-SOURCE
+> Task :expo-manifests:generateReleaseAssets UP-TO-DATE
+> Task :expo-manifests:mergeReleaseAssets UP-TO-DATE
+> Task :expo-updates-interface:mergeReleaseShaders UP-TO-DATE
+> Task :expo-updates-interface:compileReleaseShaders NO-SOURCE
+> Task :expo-updates-interface:generateReleaseAssets UP-TO-DATE
+> Task :react-native-async-storage_async-storage:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-async-storage_async-storage:compileReleaseShaders NO-SOURCE
+> Task :react-native-async-storage_async-storage:generateReleaseAssets UP-TO-DATE
+> Task :react-native-async-storage_async-storage:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-masked-view_masked-view:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-masked-view_masked-view:compileReleaseShaders NO-SOURCE
+> Task :react-native-masked-view_masked-view:generateReleaseAssets UP-TO-DATE
+> Task :react-native-masked-view_masked-view:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-reanimated:compileReleaseShaders NO-SOURCE
+> Task :react-native-reanimated:generateReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-worklets:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-worklets:compileReleaseShaders NO-SOURCE
+> Task :react-native-worklets:generateReleaseAssets UP-TO-DATE
+> Task :react-native-worklets:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :expo-updates-interface:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-async-storage_async-storage:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:processReleaseJavaRes NO-SOURCE
+> Task :react-native-masked-view_masked-view:processReleaseJavaRes NO-SOURCE
+> Task :react-native-reanimated:processReleaseJavaRes NO-SOURCE
+> Task :expo-constants:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-constants:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo-constants:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :expo-dev-menu:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-dev-menu:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo-dev-menu:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :expo-dev-menu-interface:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-dev-menu-interface:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo-dev-menu-interface:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :expo-json-utils:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-json-utils:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo-json-utils:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :expo-log-box:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-log-box:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo-log-box:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :expo-manifests:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-manifests:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo-manifests:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :expo-updates-interface:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-updates-interface:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo-updates-interface:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :react-native-async-storage_async-storage:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-async-storage_async-storage:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-async-storage_async-storage:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :react-native-masked-view_masked-view:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-masked-view_masked-view:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-masked-view_masked-view:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :react-native-reanimated:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-constants:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo-dev-menu:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-worklets:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :expo-dev-menu-interface:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-worklets:processReleaseJavaRes NO-SOURCE
+> Task :expo:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :expo:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo-json-utils:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo-log-box:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo-manifests:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-async-storage_async-storage:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-masked-view_masked-view:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-reanimated:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo-updates-interface:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo:extractProguardFiles UP-TO-DATE
+> Task :expo-constants:extractProguardFiles UP-TO-DATE
+> Task :expo-dev-menu:extractProguardFiles UP-TO-DATE
+> Task :expo-dev-menu:prepareLintJarForPublish UP-TO-DATE
+> Task :expo-dev-menu-interface:extractProguardFiles UP-TO-DATE
+> Task :expo-constants:prepareLintJarForPublish UP-TO-DATE
+> Task :expo-dev-menu-interface:prepareLintJarForPublish UP-TO-DATE
+> Task :expo-json-utils:extractProguardFiles UP-TO-DATE
+> Task :expo-log-box:extractProguardFiles UP-TO-DATE
+> Task :expo-log-box:prepareLintJarForPublish UP-TO-DATE
+> Task :expo-json-utils:prepareLintJarForPublish UP-TO-DATE
+> Task :expo-manifests:extractProguardFiles UP-TO-DATE
+> Task :expo-updates-interface:extractProguardFiles UP-TO-DATE
+> Task :expo-updates-interface:prepareLintJarForPublish UP-TO-DATE
+> Task :expo-manifests:prepareLintJarForPublish UP-TO-DATE
+> Task :expo:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-async-storage_async-storage:createFullJarRelease UP-TO-DATE
+> Task :react-native-reanimated:createFullJarRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:extractProguardFiles UP-TO-DATE
+> Task :react-native-reanimated:extractProguardFiles UP-TO-DATE
+> Task :expo-dev-client:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :react-native-reanimated:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-safe-area-context:compileReleaseKotlin UP-TO-DATE
+> Task :react-native-masked-view_masked-view:createFullJarRelease UP-TO-DATE
+> Task :expo-dev-client:generateReleaseBuildConfig UP-TO-DATE
+> Task :react-native-screens:compileReleaseKotlin UP-TO-DATE
+> Task :react-native-gesture-handler:compileReleaseKotlin UP-TO-DATE
+> Task :react-native-safe-area-context:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-google-mobile-ads:compileReleaseKotlin UP-TO-DATE
+> Task :react-native-screens:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:extractProguardFiles UP-TO-DATE
+> Task :expo-dev-client:javaPreCompileRelease UP-TO-DATE
+> Task :expo-dev-client:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-google-mobile-ads:javaPreCompileRelease UP-TO-DATE
+> Task :expo-dev-client:compileReleaseShaders NO-SOURCE
+> Task :expo-dev-launcher:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :expo-dev-client:generateReleaseAssets UP-TO-DATE
+> Task :expo-dev-client:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :expo-dev-client:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :expo-dev-client:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-safe-area-context:bundleLibRuntimeToDirRelease UP-TO-DATE
+> Task :react-native-screens:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :expo-dev-client:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :react-native-google-mobile-ads:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :react-native-safe-area-context:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-safe-area-context:compileReleaseShaders NO-SOURCE
+> Task :react-native-safe-area-context:generateReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-google-mobile-ads:bundleLibRuntimeToDirRelease UP-TO-DATE
+> Task :react-native-google-mobile-ads:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :react-native-google-mobile-ads:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-google-mobile-ads:compileReleaseShaders NO-SOURCE
+> Task :react-native-safe-area-context:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :react-native-google-mobile-ads:generateReleaseAssets UP-TO-DATE
+> Task :react-native-google-mobile-ads:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-google-mobile-ads:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :react-native-safe-area-context:processReleaseJavaRes UP-TO-DATE
+> Task :react-native-google-mobile-ads:processReleaseJavaRes UP-TO-DATE
+> Task :react-native-google-mobile-ads:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-google-mobile-ads:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-safe-area-context:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-google-mobile-ads:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-google-mobile-ads:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo-dev-client:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-safe-area-context:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :react-native-screens:bundleLibRuntimeToDirRelease UP-TO-DATE
+> Task :expo-dev-client:extractProguardFiles UP-TO-DATE
+> Task :react-native-screens:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :expo-dev-client:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-safe-area-context:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-screens:mergeReleaseShaders UP-TO-DATE
+> Task :react-native-google-mobile-ads:createFullJarRelease UP-TO-DATE
+> Task :react-native-screens:compileReleaseShaders NO-SOURCE
+> Task :react-native-screens:generateReleaseAssets UP-TO-DATE
+> Task :react-native-google-mobile-ads:extractProguardFiles UP-TO-DATE
+> Task :react-native-safe-area-context:createFullJarRelease UP-TO-DATE
+> Task :react-native-screens:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:extractProguardFiles UP-TO-DATE
+> Task :react-native-screens:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :react-native-screens:processReleaseJavaRes UP-TO-DATE
+> Task :react-native-reanimated:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-reanimated:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-reanimated:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :react-native-reanimated:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :react-native-reanimated:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-reanimated:syncReleaseLibJars UP-TO-DATE
+> Task :expo:stripReleaseDebugSymbols NO-SOURCE
+> Task :expo:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :expo:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :expo-log-box:stripReleaseDebugSymbols NO-SOURCE
+> Task :expo-log-box:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :expo-log-box:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:generateReleaseLintModel UP-TO-DATE
+> Task :expo-dev-menu-interface:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-masked-view_masked-view:prepareLintJarForPublish UP-TO-DATE
+> Task :expo-dev-menu-interface:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-masked-view_masked-view:stripReleaseDebugSymbols NO-SOURCE
+> Task :expo-dev-menu-interface:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :expo-constants:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-masked-view_masked-view:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :expo-constants:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :expo-constants:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :expo-dev-client:stripReleaseDebugSymbols NO-SOURCE
+> Task :expo-dev-client:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :expo-dev-client:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :expo-dev-menu:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-masked-view_masked-view:extractReleaseAnnotations UP-TO-DATE
+> Task :react-native-masked-view_masked-view:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :expo-dev-menu:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-masked-view_masked-view:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :expo-dev-menu:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:generateReleaseLintModel UP-TO-DATE
+> Task :expo-manifests:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-async-storage_async-storage:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-masked-view_masked-view:mergeReleaseJavaResource UP-TO-DATE
+> Task :react-native-async-storage_async-storage:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-masked-view_masked-view:syncReleaseLibJars UP-TO-DATE
+> Task :expo-manifests:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-async-storage_async-storage:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-async-storage_async-storage:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :expo-manifests:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :expo-json-utils:stripReleaseDebugSymbols NO-SOURCE
+> Task :expo-json-utils:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :expo-json-utils:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:extractReleaseAnnotations UP-TO-DATE
+> Task :expo-updates-interface:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-async-storage_async-storage:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :expo-constants:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :expo-updates-interface:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :react-native-async-storage_async-storage:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :expo-dev-client:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :expo-updates-interface:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:mergeReleaseJavaResource UP-TO-DATE
+> Task :expo-dev-menu:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :react-native-async-storage_async-storage:syncReleaseLibJars UP-TO-DATE
+> Task :expo-json-utils:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :expo-dev-menu-interface:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :expo-log-box:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :react-native-async-storage_async-storage:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :expo-manifests:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :expo-updates-interface:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :expo:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :react-native-reanimated:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :react-native-async-storage_async-storage:lintVitalAnalyzeRelease UP-TO-DATE
+> Task :react-native-masked-view_masked-view:lintVitalAnalyzeRelease UP-TO-DATE
+> Task :react-native-async-storage_async-storage:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :react-native-masked-view_masked-view:writeReleaseLintModelMetadata
+> Task :expo-modules-core:compileReleaseKotlin UP-TO-DATE
+> Task :react-native-safe-area-context:generateReleaseLintModel UP-TO-DATE
+> Task :react-native-safe-area-context:prepareLintJarForPublish UP-TO-DATE
+> Task :react-native-safe-area-context:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-safe-area-context:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :expo-dev-launcher:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :react-native-safe-area-context:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :expo-dev-launcher:generateReleaseBuildConfig UP-TO-DATE
+> Task :expo-dev-launcher:javaPreCompileRelease UP-TO-DATE
+> Task :expo-dev-launcher:mergeReleaseShaders UP-TO-DATE
+> Task :expo-dev-launcher:compileReleaseShaders NO-SOURCE
+> Task :expo-dev-launcher:generateReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:extractReleaseAnnotations UP-TO-DATE
+> Task :expo-modules-core:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :expo-dev-launcher:mergeReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :expo-modules-core:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :expo-dev-launcher:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :expo-dev-client:compileReleaseKotlin NO-SOURCE
+> Task :react-native-google-mobile-ads:generateReleaseLintModel UP-TO-DATE
+> Task :expo-dev-menu-interface:compileReleaseKotlin NO-SOURCE
+> Task :react-native-async-storage_async-storage:generateReleaseLintVitalModel
+> Task :react-native-masked-view_masked-view:generateReleaseLintVitalModel
+> Task :react-native-worklets:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :react-native-iap:javaPreCompileRelease UP-TO-DATE
+> Task :react-native-screens:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :expo-modules-core:bundleLibRuntimeToDirRelease UP-TO-DATE
+
+> Task :app:createBundleReleaseJsAndAssets
+Starting Metro Bundler
+
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+Failed to construct transformer:  Error: Cannot find module 'babel-preset-expo'
+Require stack:
+- E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\files\plugins.js
+- E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\files\index.js
+- E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\index.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\node_modules\@expo\metro-c
+onfig\build\serializer\treeShakeSerializerPlugin.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\node_modules\@expo\metro-c
+onfig\build\serializer\withExpoSerializers.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\node_modules\@expo\metro-c
+onfig\build\ExpoMetroConfig.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\node_modules\@expo\metro-c
+onfig\build\config\loadUserConfig.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\node_modules\@expo\metro-c
+onfig\build\index.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\node_modules\@expo\cli\bui
+ld\src\start\server\metro\instantiateMetro.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\node_modules\@expo\cli\bui
+ld\src\start\server\metro\MetroBundlerDevServer.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\node_modules\@expo\cli\bui
+ld\src\export\embed\exportEmbedAsync.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\node_modules\@expo\cli\bui
+ld\src\export\embed\index.js
+- E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\node_modules\@expo\cli\bui
+ld\bin\cli
+
+Make sure that all the Babel plugins and presets you are using
+are defined as dependencies or devDependencies in your package.json
+file. It's possible that the missing plugin is loaded by a preset
+you are using that forgot to add the plugin to its dependencies: you
+can workaround this problem by explicitly adding the missing package
+to your top-level package.json.
+
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at resolve (node:internal/modules/helpers:209:31)
+    at tryRequireResolve 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\files\plugins.js:128:11)
+    at resolveStandardizedNameForRequire 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\files\plugins.js:162:19)
+    at resolveStandardizedName 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\files\plugins.js:183:12)
+    at loadPreset 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\files\plugins.js:68:7)
+    at loadPreset.next (<anonymous>)
+    at createDescriptor 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-descriptors.js:140:16)
+    at createDescriptor.next (<anonymous>)
+    at evaluateSync (E:\Dev\MDB\node_modules\.pnpm\gensync@1.0.0-beta.2\node_modules\gensync\index.js:251:28)
+    at E:\Dev\MDB\node_modules\.pnpm\gensync@1.0.0-beta.2\node_modules\gensync\index.js:31:34
+    at Array.map (<anonymous>)
+    at gensync.sync (E:\Dev\MDB\node_modules\.pnpm\gensync@1.0.0-beta.2\node_modules\gensync\index.js:31:22)
+    at gensync.all (E:\Dev\MDB\node_modules\.pnpm\gensync@1.0.0-beta.2\node_modules\gensync\index.js:210:24)
+    at Generator.next (<anonymous>)
+    at createDescriptors 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-descriptors.js:102:41)
+    at createDescriptors.next (<anonymous>)
+    at createPresetDescriptors 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-descriptors.js:96:17)
+    at createPresetDescriptors.next (<anonymous>)
+    at E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\gensync-utils\functional.js:22:27
+    at Generator.next (<anonymous>)
+    at mergeChainOpts 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-chain.js:350:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-chain.js:191:24)
+    at loadFileChain.next (<anonymous>)
+    at mergeExtendsChain 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-chain.js:328:28)
+    at mergeExtendsChain.next (<anonymous>)
+    at chainWalker 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-chain.js:312:20)
+    at chainWalker.next (<anonymous>)
+    at buildRootChain 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\config-chain.js:56:36)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\partial.js:72:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at loadPartialConfig 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\partial.js:115:25)
+    at loadPartialConfig.next (<anonymous>)
+    at evaluateSync (E:\Dev\MDB\node_modules\.pnpm\gensync@1.0.0-beta.2\node_modules\gensync\index.js:251:28)
+    at sync (E:\Dev\MDB\node_modules\.pnpm\gensync@1.0.0-beta.2\node_modules\gensync\index.js:89:14)
+    at stopHiding - secret - don't use this - v1 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\errors\rewrite-stack-trace.js:47:12)
+    at loadPartialConfigSync 
+(E:\Dev\MDB\node_modules\.pnpm\@babel+core@7.29.7\node_modules\@babel\core\lib\config\index.js:37:84)
+    at Object.getCacheKey (E:\Dev\MDB\node_modules\.pnpm\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\n
+ode_modules\@expo\metro-config\build\babel-transformer.js:190:66)
+    at Object.getCacheKey (E:\Dev\MDB\node_modules\.pnpm\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\n
+ode_modules\@expo\metro-config\build\transform-worker\metro-transform-worker.js:643:28)
+    at getTransformCacheKey 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\getTransformCacheKey.js:17:19)
+    at new Transformer 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\Transformer.js:40:43)
+    at E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\Bundler.js:25:29 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    
+'E:\\Dev\\MDB\\node_modules\\.pnpm\\@babel+core@7.29.7\\node_modules\\@babel\\core\\lib\\config\\files\\plugins.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@babel+core@7.29.7\\node_modules\\@babel\\core\\lib\\config\\files\\index.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@babel+core@7.29.7\\node_modules\\@babel\\core\\lib\\index.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\\node_modules\\@ex
+po\\metro-config\\build\\serializer\\treeShakeSerializerPlugin.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\\node_modules\\@ex
+po\\metro-config\\build\\serializer\\withExpoSerializers.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\\node_modules\\@ex
+po\\metro-config\\build\\ExpoMetroConfig.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\\node_modules\\@ex
+po\\metro-config\\build\\config\\loadUserConfig.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f36c4944\\node_modules\\@ex
+po\\metro-config\\build\\index.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\\node_modules\\@ex
+po\\cli\\build\\src\\start\\server\\metro\\instantiateMetro.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\\node_modules\\@ex
+po\\cli\\build\\src\\start\\server\\metro\\MetroBundlerDevServer.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\\node_modules\\@ex
+po\\cli\\build\\src\\export\\embed\\exportEmbedAsync.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\\node_modules\\@ex
+po\\cli\\build\\src\\export\\embed\\index.js',
+    'E:\\Dev\\MDB\\node_modules\\.pnpm\\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc9f\\node_modules\\@ex
+po\\cli\\build\\bin\\cli'
+  ]
+}
+Android Bundling failed 8ms index.tsx (1 module)
+TypeError: Cannot read properties of undefined (reading 'transformFile')
+TypeError: Cannot read properties of undefined (reading 'transformFile')
+    at Bundler.transformFile (E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\Bundler.js:55:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bundler.transformFile (E:\Dev\MDB\node_modules\.pnpm\@expo+metro-config@56.0.14__76ef610a84df10d7537fe021f
+36c4944\node_modules\@expo\metro-config\build\serializer\packedMap.js:172:41)
+    at async Object.transform 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\lib\transformHelpers.js:139:12)
+    at async transform (E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\Graph.js:176:26)
+    at async visit 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\buildSubgraph.js:80:29)
+    at async Promise.all (index 0)
+    at async buildSubgraph 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\buildSubgraph.js:105:3)
+    at async Graph._buildDelta 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\Graph.js:163:22)
+    at async Graph.initialTraverseDependencies 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\Graph.js:146:19)
+    at async DeltaCalculator._getChangedDependencies 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\DeltaCalculator.js:164:25)
+    at async DeltaCalculator.getDelta 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler\DeltaCalculator.js:74:16)
+    at async DeltaBundler.buildGraph 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\DeltaBundler.js:42:5)
+    at async IncrementalBundler.buildGraphForEntries 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\IncrementalBundler.js:94:19)
+    at async IncrementalBundler.buildGraph 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\IncrementalBundler.js:178:19)
+    at async E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\IncrementalBundler.js:216:34
+    at async IncrementalBundler.initializeGraph 
+(E:\Dev\MDB\node_modules\.pnpm\metro@0.84.4\node_modules\metro\src\IncrementalBundler.js:233:24)
+    at async MetroBundlerDevServer._bundleDirectAsync (E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533
+675307e59ae90249046cb2cc9f\node_modules\@expo\cli\build\src\start\server\metro\MetroBundlerDevServer.js:1575:35)
+    at async MetroBundlerDevServer.metroLoadModuleContents (E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_0
+68533675307e59ae90249046cb2cc9f\node_modules\@expo\cli\build\src\start\server\metro\MetroBundlerDevServer.js:654:25)
+    at async MetroBundlerDevServer.legacySinglePageExportBundleAsync (E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@
+expo+met_068533675307e59ae90249046cb2cc9f\node_modules\@expo\cli\build\src\start\server\metro\MetroBundlerDevServer.js:
+841:24)
+    at async exportEmbedBundleAndAssetsAsync (E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533675307e59
+ae90249046cb2cc9f\node_modules\@expo\cli\build\src\export\embed\exportEmbedAsync.js:299:25)
+    at async exportEmbedInternalAsync (E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249
+046cb2cc9f\node_modules\@expo\cli\build\src\export\embed\exportEmbedAsync.js:251:39)
+    at async exportEmbedAsync (E:\Dev\MDB\node_modules\.pnpm\@expo+cli@56.1.15_@expo+met_068533675307e59ae90249046cb2cc
+9f\node_modules\@expo\cli\build\src\export\embed\exportEmbedAsync.js:235:5)
+
+> Task :app:createBundleReleaseJsAndAssets FAILED
+> Task :react-native-gesture-handler:compileReleaseJavaWithJavac
+> Task :expo-dev-client:compileReleaseJavaWithJavac
+> Task :expo-dev-menu-interface:compileReleaseJavaWithJavac
+
+> Task :expo-dev-launcher:compileReleaseKotlin
+w: file:///E:/Dev/MDB/node_modules/.pnpm/expo-dev-launcher@56.0.20/node_modules/expo-dev-launcher/android/src/main/java/expo/modules/devlauncher/DevLauncherPackage.kt:15:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+
+> Task :expo-json-utils:compileReleaseKotlin
+
+> Task :expo-constants:compileReleaseKotlin
+w: file:///E:/Dev/MDB/node_modules/.pnpm/expo-constants@56.0.18/node_modules/expo-constants/android/src/main/java/expo/modules/constants/ConstantsModule.kt:13:5 'fun Constants(legacyConstantsProvider: () -> Map<String, Any?>): Unit' is deprecated. Use `Constant` or `Property` instead.
+
+> Task :expo-dev-menu:compileReleaseKotlin
+> Task :expo-updates-interface:compileReleaseKotlin
+> Task :expo-log-box:compileReleaseKotlin
+
+> Task :react-native-iap:compileReleaseKotlin FAILED
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:4:26 Unresolved reference 'NitroModules'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:5:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:6:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:74:9 Unresolved reference 'NitroModules'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:102:72 Unresolved reference 'await'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:105:82 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:106:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:119:17 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:156:45 Suspend function 'suspend fun await(): Boolean' can only be called from a 
+coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:265:21 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:305:35 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:306:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:308:35 Suspend function 'suspend fun invoke(): Boolean' can only be called from a 
+coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:324:68 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:325:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:338:13 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:353:47 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+ProductRequest): FetchProductsResult' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:373:43 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+ProductRequest): FetchProductsResult' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:397:66 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:398:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:399:55 Overload resolution ambiguity between candidates:
+fun create(value: <ERROR TYPE REF: Symbol not found for NullType>): RequestPurchaseResult
+fun create(value: Array<Purchase>): RequestPurchaseResult
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:425:17 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:428:32 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:439:17 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:448:37 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+ProductRequest): FetchProductsResult' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:534:30 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:563:83 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:564:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:566:13 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:598:25 Suspend function 'suspend fun getAvailableItems(type: ProductQueryType): 
+List<Purchase>' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:601:25 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+PurchaseOptions?): List<Purchase>' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:611:75 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:612:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:613:13 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:623:51 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+List<String>?): List<ActiveSubscription>' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:666:75 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:667:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:668:13 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:676:41 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+List<String>?): Boolean' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:694:75 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:695:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:725:17 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:741:29 Suspend function 'suspend fun invoke(p1: @ParameterName(...) String): 
+Boolean' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:743:29 Suspend function 'suspend fun invoke(p1: @ParameterName(...) String): 
+Boolean' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:772:35 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:773:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:775:17 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:777:37 Suspend function 'suspend fun getStorefront(): String' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:787:5 'memorySize' overrides nothing.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1277:38 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1278:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1284:42 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1285:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1291:88 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1292:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1294:17 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1298:33 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+DeepLinkOptions?): Unit' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1308:43 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1309:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1310:49 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1315:47 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1316:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1319:49 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1323:43 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1324:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1330:51 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1331:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1338:41 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1339:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1345:54 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1346:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1349:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1354:48 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1355:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1357:13 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1361:48 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1362:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1368:73 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1369:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1407:44 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+VerifyPurchaseProps): VerifyPurchaseResult' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1456:92 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1457:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1481:38 Suspend function 'suspend fun invoke(p1: @ParameterName(...) 
+VerifyPurchaseWithProviderProps): VerifyPurchaseWithProviderResult' can only be called from a coroutine or another 
+suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1522:54 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1523:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1528:54 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1529:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1534:53 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1535:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1540:47 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1541:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1546:29 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1547:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1554:63 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1555:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1560:39 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1561:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1566:35 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1567:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1572:46 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1573:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1578:57 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1579:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1584:53 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1585:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1594:64 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1595:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1598:35 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1611:57 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1612:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1618:36 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1632:87 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1633:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1639:29 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1643:100 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1707:84 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1708:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1711:17 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1713:43 Suspend function 'suspend fun isBillingProgramAvailable(program: 
+BillingProgramAndroid): BillingProgramAvailabilityResultAndroid' can only be called from a coroutine or another 
+suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1728:95 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1729:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1732:17 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1734:43 Suspend function 'suspend fun 
+createBillingProgramReportingDetails(program: BillingProgramAndroid): BillingProgramReportingDetailsAndroid' can only 
+be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1749:91 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1750:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1758:17 Suspend function 'suspend fun ensureConnection(): Unit' can only be called 
+from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1760:32 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1771:30 Suspend function 'suspend fun <T> withContext(context: CoroutineContext, 
+block: suspend CoroutineScope.() -> T): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >' can only be called from a coroutine or another suspend function.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1815:57 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1816:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1821:59 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1822:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1827:63 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1828:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1834:64 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1835:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1840:108 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1841:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1846:112 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/android/src/main/java/c
+om/margelo/nitro/iap/HybridRnIap.kt:1847:16 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/ExternalPurchaseCustomLinkNoticeResultIOS.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/ExternalPurchaseCustomLinkTokenResultIOS.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/ExternalPurchaseLinkResultIOS.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/ExternalPurchaseNoticeResultIOS.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:13:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:14:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:15:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:28:33 Unresolved reference 'HybridObject'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:35:80 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:39:33 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:43:66 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:47:64 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:51:81 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:55:73 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:59:73 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:63:73 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:121:36 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:125:40 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:129:45 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:133:41 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:137:41 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:141:49 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:145:39 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:149:52 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:153:52 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:157:52 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:161:51 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:165:45 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:169:27 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:173:46 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:177:46 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:181:61 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:185:37 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:189:33 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:193:44 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:197:55 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:201:51 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:205:71 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:209:90 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:213:33 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:217:86 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:221:62 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:225:55 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:229:85 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:273:82 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:277:93 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:281:89 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:285:55 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:289:57 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:293:61 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:297:62 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:301:106 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:305:110 Unresolved reference 'Promise'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:308:3 'toString' overrides nothing.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:315:60 Unresolved reference 'HybridObject'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:317:14 'initHybrid' overrides nothing.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:319:3 'createCxxPart' overrides nothing.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/HybridRnIapSpec.kt:319:16 'public' function exposes its 'protected (in 
+HybridRnIapSpec)' return type 'CxxPart'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroActiveSubscription.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroAvailablePurchasesAndroidOptions.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroAvailablePurchasesIosOptions.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroAvailablePurchasesOptions.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroDeepLinkOptionsAndroid.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroDiscountDisplayInfoAndroid.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroFinishTransactionAndroidParams.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroFinishTransactionParams.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroOneTimePurchaseOfferDetail.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroProduct.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroPurchase.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroPurchaseRequest.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroReceiptValidationGoogleOptions.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroReceiptValidationParams.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroReceiptValidationResultAndroid.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroReceiptValidationResultIOS.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroRenewalInfoIOS.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroRentalDetailsAndroid.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroRequestPurchaseAndroid.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroRequestPurchaseIos.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroSubscriptionRenewalInfo.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroSubscriptionStatus.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroVerifyPurchaseWithIapkitProps.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroVerifyPurchaseWithProviderError.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroVerifyPurchaseWithProviderProps.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/NitroVerifyPurchaseWithProviderResult.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/PurchaseAndroid.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/PurchaseIOS.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/RenewalInfoIOS.kt:12:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/RequestPurchaseResult.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/RequestPurchaseResult.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/RequestPurchaseResult.kt:37:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/RequestPurchaseResult.kt:54:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/RequestPurchaseResult.kt:66:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_AndroidSubscriptionOfferInput_.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_AndroidSubscriptionOfferInput_.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_AndroidSubscriptionOfferInput_.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_AndroidSubscriptionOfferInput_.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_AndroidSubscriptionOfferInput_.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroOneTimePurchaseOfferDetail_.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroOneTimePurchaseOfferDetail_.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroOneTimePurchaseOfferDetail_.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroOneTimePurchaseOfferDetail_.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroOneTimePurchaseOfferDetail_.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroSubscriptionStatus_.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroSubscriptionStatus_.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroSubscriptionStatus_.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroSubscriptionStatus_.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroSubscriptionStatus_.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroVerifyPurchaseWithProviderError_.kt:11:26 Unresolved 
+reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroVerifyPurchaseWithProviderError_.kt:20:43 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroVerifyPurchaseWithProviderError_.kt:29:24 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroVerifyPurchaseWithProviderError_.kt:38:32 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_NitroVerifyPurchaseWithProviderError_.kt:48:23 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_String_.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_String_.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_String_.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_String_.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Array_String_.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Boolean.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Boolean.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Boolean.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Boolean.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Boolean.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Double.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Double.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Double.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Double.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Double.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_InitConnectionConfig.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_InitConnectionConfig.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_InitConnectionConfig.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_InitConnectionConfig.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_InitConnectionConfig.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Map_String__String_.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Map_String__String_.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Map_String__String_.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Map_String__String_.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_Map_String__String_.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesAndroidOptions.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesAndroidOptions.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesAndroidOptions.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesAndroidOptions.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesAndroidOptions.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesIosOptions.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesIosOptions.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesIosOptions.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesIosOptions.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroAvailablePurchasesIosOptions.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountAmountAndroid.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountAmountAndroid.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountAmountAndroid.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountAmountAndroid.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountAmountAndroid.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountDisplayInfoAndroid.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountDisplayInfoAndroid.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountDisplayInfoAndroid.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountDisplayInfoAndroid.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroDiscountDisplayInfoAndroid.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionAndroidParams.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionAndroidParams.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionAndroidParams.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionAndroidParams.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionAndroidParams.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionIosParams.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionIosParams.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionIosParams.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionIosParams.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroFinishTransactionIosParams.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroLimitedQuantityInfoAndroid.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroLimitedQuantityInfoAndroid.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroLimitedQuantityInfoAndroid.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroLimitedQuantityInfoAndroid.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroLimitedQuantityInfoAndroid.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPreorderDetailsAndroid.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPreorderDetailsAndroid.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPreorderDetailsAndroid.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPreorderDetailsAndroid.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPreorderDetailsAndroid.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroProduct.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroProduct.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroProduct.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroProduct.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroProduct.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPurchase.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPurchase.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPurchase.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPurchase.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroPurchase.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationAppleOptions.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationAppleOptions.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationAppleOptions.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationAppleOptions.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationAppleOptions.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationGoogleOptions.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationGoogleOptions.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationGoogleOptions.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationGoogleOptions.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationGoogleOptions.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationHorizonOptions.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationHorizonOptions.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationHorizonOptions.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationHorizonOptions.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroReceiptValidationHorizonOptions.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRenewalInfoIOS.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRenewalInfoIOS.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRenewalInfoIOS.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRenewalInfoIOS.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRenewalInfoIOS.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRentalDetailsAndroid.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRentalDetailsAndroid.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRentalDetailsAndroid.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRentalDetailsAndroid.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRentalDetailsAndroid.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseAndroid.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseAndroid.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseAndroid.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseAndroid.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseAndroid.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseIos.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseIos.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseIos.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseIos.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroRequestPurchaseIos.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroSubscriptionRenewalInfo.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroSubscriptionRenewalInfo.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroSubscriptionRenewalInfo.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroSubscriptionRenewalInfo.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroSubscriptionRenewalInfo.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroValidTimeWindowAndroid.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroValidTimeWindowAndroid.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroValidTimeWindowAndroid.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroValidTimeWindowAndroid.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroValidTimeWindowAndroid.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitAppleProps.kt:11:26 Unresolved 
+reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitAppleProps.kt:20:43 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitAppleProps.kt:29:24 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitAppleProps.kt:38:32 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitAppleProps.kt:48:23 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitGoogleProps.kt:11:26 Unresolved 
+reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitGoogleProps.kt:20:43 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitGoogleProps.kt:29:24 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitGoogleProps.kt:38:32 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitGoogleProps.kt:48:23 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitProps.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitProps.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitProps.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitProps.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitProps.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitResult.kt:11:26 Unresolved reference 
+'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitResult.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitResult.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitResult.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_NitroVerifyPurchaseWithIapkitResult.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PendingPurchaseUpdateAndroid.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PendingPurchaseUpdateAndroid.kt:20:43 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PendingPurchaseUpdateAndroid.kt:29:24 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PendingPurchaseUpdateAndroid.kt:38:32 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PendingPurchaseUpdateAndroid.kt:48:23 Unresolved reference 
+'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PromotionalOfferJwsInputIOS.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PromotionalOfferJwsInputIOS.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PromotionalOfferJwsInputIOS.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PromotionalOfferJwsInputIOS.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PromotionalOfferJwsInputIOS.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PurchaseOfferIOS.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PurchaseOfferIOS.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PurchaseOfferIOS.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PurchaseOfferIOS.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_PurchaseOfferIOS.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_RenewalInfoIOS.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_RenewalInfoIOS.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_RenewalInfoIOS.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_RenewalInfoIOS.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_RenewalInfoIOS.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_String.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_String.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_String.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_String.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_String.kt:48:23 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_SubscriptionProductReplacementParamsAndroid.kt:11:26 Unresolved 
+reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_SubscriptionProductReplacementParamsAndroid.kt:20:43 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_SubscriptionProductReplacementParamsAndroid.kt:29:24 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_SubscriptionProductReplacementParamsAndroid.kt:38:32 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_SubscriptionProductReplacementParamsAndroid.kt:48:23 Unresolved 
+reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_WinBackOfferInputIOS.kt:11:26 Unresolved reference 'core'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_WinBackOfferInputIOS.kt:20:43 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_WinBackOfferInputIOS.kt:29:24 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_WinBackOfferInputIOS.kt:38:32 Unresolved reference 'NullType'.
+e: file:///E:/Dev/MDB/node_modules/.pnpm/react-native-iap@14.7.20/node_modules/react-native-iap/nitrogen/generated/andr
+oid/kotlin/com/margelo/nitro/iap/Variant_NullType_WinBackOfferInputIOS.kt:48:23 Unresolved reference 'NullType'.
+
+[Incubating] Problems report is available at: file:///E:/Dev/MDB/android/build/reports/problems/problems-report.html
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':app:createBundleReleaseJsAndAssets'.
+> Process 'command 'cmd'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':react-native-iap:compileReleaseKotlin'.
+> A failure occurred while executing 
+org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 48s
+502 actionable tasks: 20 executed, 482 up-to-date

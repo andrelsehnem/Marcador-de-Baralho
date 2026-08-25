@@ -1,0 +1,556 @@
+/* ============================================
+   CANASTRA PAGE - Layout Duplo
+   ============================================ */
+
+.canastra-page {
+  background-color: var(--canastra-page-bg);
+  color: var(--canastra-text);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+}
+
+/* ============ HEADER ============ */
+
+.canastra-header {
+  background: var(--canastra-header-bg);
+  border-bottom: 1px solid var(--canastra-header-border);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.canastra-back {
+  background: transparent;
+  border: none;
+  color: var(--canastra-text);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.canastra-back:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.canastra-header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.canastra-header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.canastra-header-tools {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.canastra-config-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.canastra-config-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ============ MAIN CONTENT ============ */
+
+.canastra-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ============ TEAM SECTION ============ */
+
+.canastra-team {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow-y: auto;
+  gap: 1rem;
+}
+
+.canastra-team-1 {
+  border-right: 2px solid var(--canastra-divider);
+}
+
+.canastra-team-2 {
+  border-left: 2px solid var(--canastra-divider);
+}
+
+.canastra-team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--canastra-divider);
+}
+
+.canastra-team-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.canastra-team-total {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--canastra-button-primary), var(--canastra-button-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============ HISTÓRICO DE PONTOS ============ */
+
+.canastra-historico {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-right: 0.25rem;
+}
+
+.canastra-historico::-webkit-scrollbar {
+  width: 6px;
+}
+
+.canastra-historico::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.canastra-historico::-webkit-scrollbar-thumb {
+  background: var(--canastra-input-border);
+  border-radius: 3px;
+}
+
+.canastra-historico::-webkit-scrollbar-thumb:hover {
+  background: var(--canastra-button-primary);
+}
+
+.canastra-empty {
+  text-align: center;
+  color: var(--canastra-text-secondary);
+  font-style: italic;
+  margin: auto;
+}
+
+.canastra-score-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--canastra-input-bg);
+  border: 1px solid var(--canastra-input-border);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.canastra-score-item:hover {
+  border-color: var(--canastra-button-primary);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.canastra-score-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.canastra-score-value:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.canastra-score-edit {
+  flex: 1;
+}
+
+.canastra-score-edit input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--canastra-button-primary);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--canastra-input-bg);
+  color: var(--canastra-text);
+}
+
+.canastra-score-edit input:focus {
+  outline: none;
+  border-color: var(--canastra-button-hover);
+}
+
+.canastra-delete-btn {
+  background: var(--canastra-danger-bg);
+  border: 1px solid var(--canastra-danger-border);
+  color: var(--canastra-danger-border);
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+  min-width: 28px;
+}
+
+.canastra-delete-btn:hover {
+  background-color: var(--canastra-danger-border);
+  color: white;
+}
+
+/* ============ INPUT SECTION ============ */
+
+.canastra-input-section {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 2px solid var(--canastra-divider);
+}
+
+.canastra-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--canastra-input-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--canastra-input-bg);
+  color: var(--canastra-text);
+  transition: border-color 0.2s;
+}
+
+.canastra-input:focus {
+  outline: none;
+  border-color: var(--canastra-button-primary);
+}
+
+.canastra-input::placeholder {
+  color: var(--canastra-text-secondary);
+}
+
+.canastra-add-btn {
+  padding: 0.75rem 1rem;
+  background-color: var(--canastra-button-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.canastra-add-btn:hover {
+  background-color: var(--canastra-button-hover);
+}
+
+.canastra-add-btn:active {
+  transform: scale(0.98);
+}
+
+/* ============ DIVIDER ============ */
+
+.canastra-divider {
+  display: none;
+}
+
+/* ============ MODAL ============ */
+
+.canastra-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.canastra-modal {
+  background-color: var(--canastra-page-bg);
+  border: 1px solid var(--canastra-input-border);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 90%;
+  width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.canastra-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.canastra-config-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.canastra-config-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--canastra-text-secondary);
+}
+
+.canastra-config-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--canastra-input-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--canastra-input-bg);
+  color: var(--canastra-text);
+}
+
+.canastra-config-group input:focus {
+  outline: none;
+  border-color: var(--canastra-button-primary);
+}
+
+.canastra-modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.canastra-btn-primary,
+.canastra-btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.canastra-btn-primary {
+  background-color: var(--canastra-button-primary);
+  color: white;
+}
+
+.canastra-btn-primary:hover {
+  background-color: var(--canastra-button-hover);
+}
+
+.canastra-btn-secondary {
+  background-color: transparent;
+  color: var(--canastra-text);
+  border: 1px solid var(--canastra-input-border);
+}
+
+.canastra-btn-secondary:hover {
+  background-color: var(--canastra-input-bg);
+  border-color: var(--canastra-button-primary);
+}
+
+/* ============ FINISH MODAL ============ */
+
+.canastra-modal-finish {
+  text-align: center;
+}
+
+.canastra-finish-winner {
+  margin: 2rem 0;
+}
+
+.canastra-finish-label {
+  font-size: 0.875rem;
+  color: var(--canastra-text-secondary);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.canastra-finish-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
+  background: linear-gradient(135deg, var(--canastra-button-primary), var(--canastra-button-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.canastra-finish-scores {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.canastra-finish-score {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.canastra-finish-team {
+  font-size: 0.875rem;
+  color: var(--canastra-text-secondary);
+  text-transform: uppercase;
+}
+
+.canastra-finish-points {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* ============ RESPONSIVIDADE ============ */
+
+@media (max-width: 900px) {
+  .canastra-team-1 {
+    border-right: none;
+  }
+
+  .canastra-team-2 {
+    border-left: none;
+  }
+
+  .canastra-main {
+    flex-direction: column;
+  }
+
+  .canastra-team {
+    border-bottom: 2px solid var(--canastra-divider);
+  }
+
+  .canastra-team-name {
+    font-size: 1.125rem;
+  }
+
+  .canastra-team-total {
+    font-size: 1.75rem;
+  }
+
+  .canastra-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .canastra-header-title {
+    font-size: 1.125rem;
+  }
+
+  .canastra-modal {
+    width: 85%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .canastra-page {
+    height: 100vh;
+  }
+
+  .canastra-header {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .canastra-back {
+    font-size: 0.875rem;
+  }
+
+  .canastra-header-title {
+    font-size: 1rem;
+  }
+
+  .canastra-team {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .canastra-team-header {
+    margin-bottom: 0.25rem;
+  }
+
+  .canastra-team-name {
+    font-size: 1rem;
+  }
+
+  .canastra-team-total {
+    font-size: 1.5rem;
+  }
+
+  .canastra-input-section {
+    flex-direction: column;
+  }
+
+  .canastra-add-btn {
+    width: 100%;
+  }
+
+  .canastra-modal {
+    width: 90%;
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .canastra-modal-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .canastra-modal-actions {
+    flex-direction: column;
+  }
+
+  .canastra-btn-primary,
+  .canastra-btn-secondary {
+    width: 100%;
+  }
+
+  .canastra-finish-scores {
+    gap: 1rem;
+  }
+
+  .canastra-finish-name {
+    font-size: 1.5rem;
+  }
+
+  .canastra-finish-points {
+    font-size: 2rem;
+  }
+}

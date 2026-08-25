@@ -4,6 +4,7 @@ import { useBillingPurchase } from '../hooks/useBillingPurchase';
 import { usePurchase } from '../contexts/PurchaseContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { isBillingSupportedRuntime } from '../services/billing';
+import { getContrastTextColor } from '../constants/colors';
 
 interface RemoveAdsPurchaseButtonProps {
   style?: any;
@@ -16,7 +17,7 @@ export const RemoveAdsPurchaseButton: React.FC<RemoveAdsPurchaseButtonProps> = (
 }) => {
   const { launchBillingFlow, loading } = useBillingPurchase();
   const { isPurchased } = usePurchase();
-  const { theme, colors } = useTheme();
+  const { effectiveTheme, colorTheme, colors, appearance } = useTheme();
 
   // Não mostrar botão se a compra já foi feita
   if (isPurchased) {
@@ -32,12 +33,14 @@ export const RemoveAdsPurchaseButton: React.FC<RemoveAdsPurchaseButtonProps> = (
     return null;
   }
 
-  const isDark = theme === 'dark';
-  const backgroundColor = isDark ? colors.danger : colors.primary;
-  const textColor = colors.surface;
-  const badgeBackgroundColor = colors.warning;
-  const badgeTextColor = colors.text.primary;
-  const subtitleColor = colors.surface;
+  const isDark = effectiveTheme === 'dark';
+  const backgroundColor = isDark ? appearance.danger : appearance.action;
+  const textColor = getContrastTextColor(backgroundColor);
+  const isDefaultTheme = colorTheme === 'default';
+  const badgeBackgroundColor = isDefaultTheme ? colors.warning : appearance.warning;
+  const badgeTextColor = getContrastTextColor(badgeBackgroundColor);
+  const subtitleColor = isDefaultTheme ? colors.surface : textColor;
+  const priceColor = isDefaultTheme ? colors.warning : textColor;
 
   return (
     <TouchableOpacity
@@ -45,8 +48,8 @@ export const RemoveAdsPurchaseButton: React.FC<RemoveAdsPurchaseButtonProps> = (
         styles.button,
         {
           backgroundColor,
-          borderColor: colors.warning,
-          shadowColor: colors.danger,
+          borderColor: isDefaultTheme ? colors.warning : appearance.border,
+          shadowColor: appearance.danger,
         },
         style,
       ]}
@@ -62,9 +65,15 @@ export const RemoveAdsPurchaseButton: React.FC<RemoveAdsPurchaseButtonProps> = (
             <Text style={[styles.offerText, { color: badgeTextColor }]}>OFERTA ESPECIAL</Text>
           </View>
           <Text style={[styles.buttonText, { color: textColor }, textStyle]}>
-            🔥 Remover Anúncios
+           Remover os anúncios e 
           </Text>
-          <Text style={[styles.subtitleText, { color: subtitleColor }]}>Pague menos agora</Text>
+          <Text style={[styles.buttonText, { color: textColor }, textStyle]}>
+            liberar temas exclusivos!
+          </Text>
+          <View style={styles.priceRow}>
+            <Text style={[styles.oldPriceText, { color: subtitleColor }]}>R$4,99</Text>
+            <Text style={[styles.newPriceText, { color: priceColor }]}>R$1,99</Text>
+          </View>
         </View>
       )}
     </TouchableOpacity>
@@ -85,7 +94,7 @@ const styles = StyleSheet.create({
     elevation: 8,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '700',
   },
   contentContainer: {
@@ -102,8 +111,18 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     letterSpacing: 0.6,
   },
-  subtitleText: {
-    fontSize: 12,
-    fontWeight: '600',
+  priceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  oldPriceText: {
+    fontSize: 13,
+    textDecorationLine: 'line-through',
+    opacity: 0.7,
+  },
+  newPriceText: {
+    fontSize: 20,
+    fontWeight: '800',
   },
 });

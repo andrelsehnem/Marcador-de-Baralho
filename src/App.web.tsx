@@ -12,10 +12,11 @@ const Landing = lazy(() => import('./web/pages/Landing/Landing'));
 const Cacheta = lazy(() => import('./web/pages/Cacheta/Cacheta'));
 const Truco = lazy(() => import('./web/pages/Truco/Truco'));
 const Marcador = lazy(() => import('./web/pages/Marcador/Marcador'));
+const Canastra = lazy(() => import('./web/pages/Canastra/Canastra'));
 const ComoJogarTruco = lazy(() => import('./web/pages/ComoJogarTruco/ComoJogarTruco'));
 const ComoJogarCacheta = lazy(() => import('./web/pages/ComoJogarCacheta/ComoJogarCacheta'));
 
-type WebPage = 'landing' | 'listajogos' | 'truco' | 'cacheta' | 'marcador' | 'como-jogar-truco' | 'como-jogar-cacheta';
+type WebPage = 'landing' | 'listajogos' | 'truco' | 'cacheta' | 'marcador' | 'canastra' | 'como-jogar-truco' | 'como-jogar-cacheta';
 
 const CANONICAL_SITE_URL = 'https://marcadordepontos.com.br';
 
@@ -54,6 +55,11 @@ const SEO_BY_PAGE: Record<WebPage, { title: string; description: string; path: s
     title: 'Marcador de Cacheta Online',
     description: 'Marque pontos da Cacheta com vários jogadores, edição de nomes e placar salvo automaticamente no navegador.',
     path: '/cacheta',
+  },
+  canastra: {
+    title: 'Marcador de Canastra Online',
+    description: 'Marque pontos de Canastra com 2 times, configurações personalizáveis e histórico editável. Salva automaticamente.',
+    path: '/canastra',
   },
 };
 
@@ -106,6 +112,7 @@ export default function App() {
       else if (path === '/cacheta') setCurrentPage('cacheta');
       else if (path === '/truco') setCurrentPage('truco');
       else if (path === '/marcador') setCurrentPage('marcador');
+      else if (path === '/canastra') setCurrentPage('canastra');
       else if (path === '/como-jogar-truco') setCurrentPage('como-jogar-truco');
       else if (path === '/como-jogar-cacheta') setCurrentPage('como-jogar-cacheta');
       else setCurrentPage('landing');
@@ -153,6 +160,7 @@ export default function App() {
             {currentPage === 'listajogos' && <ListaJogos onNavigate={navigateTo} />}
             {currentPage === 'truco' && <Truco onBack={() => navigateTo('listajogos')} />}
             {currentPage === 'marcador' && <Marcador onBack={() => navigateTo('listajogos')} />}
+            {currentPage === 'canastra' && <Canastra onNavigate={navigateTo} />}
             {currentPage === 'como-jogar-truco' && (
               <ComoJogarTruco
                 onBack={() => navigateTo('listajogos')}

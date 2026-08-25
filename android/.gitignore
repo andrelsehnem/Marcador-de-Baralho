@@ -1,14 +1,3 @@
-node_modules
-node_modules/
-marcador.keystore
-android/upload-keystore.jks
-android/gradle.properties
-build android.txt
-android/.gradle/
-android/.kotlin/
-android/build/
-android/app/build/
-android/app/.cxx/
 # OSX
 #
 .DS_Store
@@ -22,6 +11,9 @@ local.properties
 *.iml
 *.hprof
 .cxx/
+
+# generated inline modules
+app/src/main/java/inline/
 
 # Bundle artifacts
 *.jsbundle

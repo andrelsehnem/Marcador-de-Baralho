@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {
-  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -10,9 +9,11 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useInterstitialAd } from '../../shared/components/AdMob/useInterstitialAd';
+import { getContrastTextColor } from '../../shared/constants/colors';
 
 interface Player {
   id: number;
@@ -37,16 +38,19 @@ const DEFAULT_PLAYERS: Player[] = [
 ];
 
 const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
-  const { theme, colors } = useTheme();
+  const { effectiveTheme, colorTheme, appearance } = useTheme();
   const { width, height } = useWindowDimensions();
   const { showInterstitialAd } = useInterstitialAd();
 
-  const isDark = theme === 'dark';
+  const isDark = effectiveTheme === 'dark';
   const isPortrait = height >= width;
-  const bgColor = isDark ? colors.background.dark : colors.background.light;
-  const cardColor = isDark ? colors.background.dark2 : colors.surface;
-  const textColor = isDark ? colors.text.dark : colors.text.light;
-  const primaryColor = isDark ? colors.primary : colors.secondaryDark;
+  const bgColor = appearance.background;
+  const cardColor = appearance.surface;
+  const textColor = appearance.text;
+  const cardTextColor = appearance.surfaceText;
+  const primaryColor = appearance.action;
+  const primaryTextColor = appearance.onAction;
+  const dangerTextColor = getContrastTextColor(appearance.danger);
   const containerPadding = isPortrait ? 16 : 12;
 
   const [players, setPlayers] = useState<Player[]>(DEFAULT_PLAYERS);
@@ -198,8 +202,8 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
                 styles.playerNameInput,
                 {
                   borderColor: primaryColor,
-                  color: textColor,
-                  backgroundColor: isDark ? colors.background.dark : '#fff'
+                  color: cardTextColor,
+                  backgroundColor: cardColor,
                 }
               ]}
               value={editingName}
@@ -211,7 +215,7 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
             />
           ) : (
             <TouchableOpacity onPress={() => startEditingName(player)}>
-              <Text style={[styles.playerName, { color: textColor }]}>
+              <Text style={[styles.playerName, { color: cardTextColor }]}>
                 {player.name}
               </Text>
             </TouchableOpacity>
@@ -229,10 +233,10 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
             <Text
               style={[
                 styles.dealerButtonText,
-                { color: dealerId === player.id ? '#fff' : primaryColor }
+                { color: dealerId === player.id ? primaryTextColor : primaryColor }
               ]}
             >
-              {dealerId === player.id ? '🚩 Deu carta' : 'Deu carta'}
+              {dealerId === player.id ? `${colorTheme === 'default' ? '🚩' : '◆'} Deu carta` : 'Deu carta'}
             </Text>
           </TouchableOpacity>
         </View>
@@ -240,9 +244,9 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
           {players.length > 1 && (
             <TouchableOpacity
               onPress={() => removePlayer(player.id)}
-              style={[styles.removeButton, { backgroundColor: colors.danger }]}
+              style={[styles.removeButton, { backgroundColor: appearance.danger }]}
             >
-              <Text style={styles.removeButtonText}>✕</Text>
+              <Text style={[styles.removeButtonText, { color: dangerTextColor }]}>✕</Text>
             </TouchableOpacity>
           )}
         </View>
@@ -256,20 +260,20 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
         <TouchableOpacity
           style={[styles.scoreButton, styles.subtractButton, { 
             backgroundColor: cardColor,
-            borderColor: colors.danger 
+            borderColor: appearance.danger
           }]}
           onPress={() => updateScore(player.id, -2)}
         >
-          <Text style={[styles.scoreButtonText, { color: colors.danger }]}>-2</Text>
+          <Text style={[styles.scoreButtonText, { color: appearance.danger }]}>-2</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.scoreButton, styles.subtractButton, { 
             backgroundColor: cardColor,
-            borderColor: colors.danger 
+            borderColor: appearance.danger
           }]}
           onPress={() => updateScore(player.id, -1)}
         >
-          <Text style={[styles.scoreButtonText, { color: colors.danger }]}>-1</Text>
+          <Text style={[styles.scoreButtonText, { color: appearance.danger }]}>-1</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.scoreButton, styles.addButton, { 
@@ -278,7 +282,7 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
           }]}
           onPress={() => updateScore(player.id, 1)}
         >
-          <Text style={[styles.scoreButtonText, { color: '#fff' }]}>+1</Text>
+          <Text style={[styles.scoreButtonText, { color: primaryTextColor }]}>+1</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.scoreButton, styles.addButton, { 
@@ -287,7 +291,7 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
           }]}
           onPress={() => updateScore(player.id, 2)}
         >
-          <Text style={[styles.scoreButtonText, { color: '#fff' }]}>+2</Text>
+          <Text style={[styles.scoreButtonText, { color: primaryTextColor }]}>+2</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -345,16 +349,16 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
               <TouchableOpacity
                 style={[styles.actionButton, { 
                   backgroundColor: cardColor,
-                  borderColor: colors.danger 
+                  borderColor: appearance.danger
                 }]}
                 onPress={resetPlayers}
               >
-                <Text style={[styles.actionButtonText, { color: colors.danger }]}>Reiniciar Jogo</Text>
+                <Text style={[styles.actionButtonText, { color: appearance.danger }]}>Reiniciar Jogo</Text>
               </TouchableOpacity>
             </View>
 
             <View style={styles.initialScoreContainer}>
-              <Text style={[styles.initialScoreLabel, { color: textColor }]}>
+              <Text style={[styles.initialScoreLabel, { color: cardTextColor }]}>
                 Pontuação Inicial
               </Text>
               <View style={[
@@ -368,13 +372,13 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
                   }}
                   style={[styles.initialScoreButton, { opacity: 0.7 }]}
                 >
-                  <Text style={[styles.initialScoreButtonText, { color: textColor }]}>−</Text>
+                  <Text style={[styles.initialScoreButtonText, { color: cardTextColor }]}>−</Text>
                 </TouchableOpacity>
                 <TextInput
                   style={[
                     styles.initialScoreInput,
                     {
-                      color: textColor,
+                      color: cardTextColor,
                     }
                   ]}
                   value={initialScore}
@@ -388,7 +392,7 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
                   keyboardType="number-pad"
                   maxLength={3}
                   placeholder="Ex: 10"
-                  placeholderTextColor={isDark ? '#666' : '#aaa'}
+                  placeholderTextColor={appearance.border}
                 />
                 <TouchableOpacity
                   onPress={() => {
@@ -397,7 +401,7 @@ const CachetaScreen: React.FC<CachetaScreenProps> = ({ onBack }) => {
                   }}
                   style={[styles.initialScoreButton, { opacity: 0.7 }]}
                 >
-                  <Text style={[styles.initialScoreButtonText, { color: textColor }]}>+</Text>
+                  <Text style={[styles.initialScoreButtonText, { color: cardTextColor }]}>+</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -420,7 +424,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 16,
-    paddingTop: 12,
+    paddingTop: 20,
   },
   backButton: {
     paddingHorizontal: 14,

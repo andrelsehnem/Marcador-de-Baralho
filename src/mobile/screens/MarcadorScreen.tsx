@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
   Platform,
-  SafeAreaView,
   StatusBar,
   StyleSheet,
   Text,
@@ -10,6 +9,7 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useKeepAwake } from 'expo-keep-awake';
 // Importação lazy para evitar crash em builds sem o módulo nativo linkado
@@ -44,12 +44,13 @@ const DEFAULT_STATE: MarcadorMobileState = {
 };
 
 const MarcadorScreen: React.FC<MarcadorScreenProps> = ({ onBack }) => {
-  const { theme, colors } = useTheme();
+  const { effectiveTheme, colorTheme, colors, appearance } = useTheme();
   const { showInterstitialAd } = useInterstitialAd();
   const { width, height } = useWindowDimensions();
   useKeepAwake();
 
-  const isDark = theme === 'dark';
+  const isDark = effectiveTheme === 'dark';
+  const isCustomTheme = colorTheme !== 'default';
   const isPortrait = height >= width;
 
   const [state, setState] = useState<MarcadorMobileState>(DEFAULT_STATE);
@@ -135,15 +136,26 @@ const MarcadorScreen: React.FC<MarcadorScreenProps> = ({ onBack }) => {
     onBack();
   };
 
-  const bgColor = isDark ? colors.background.dark : colors.background.light;
-  const headerBg = isDark ? colors.background.dark2 : colors.surface;
-  const textColor = isDark ? '#F8FAFC' : '#0B1324';
+  const bgColor = appearance.background;
+  const headerBg = appearance.surface;
+  const textColor = appearance.text;
+  const headerTextColor = appearance.surfaceText;
   const dividerColor = isDark ? 'rgba(255,255,255,0.16)' : 'rgba(15,23,42,0.18)';
 
-  const teamASoft = isDark ? 'rgba(59,130,246,0.4)' : 'rgba(59,130,246,0.32)';
-  const teamAStrong = isDark ? 'rgba(14,165,233,0.68)' : 'rgba(14,165,233,0.58)';
-  const teamBSoft = isDark ? 'rgba(252, 163, 100, 0.7)' : 'rgba(248, 149, 78, 0.62)';
-  const teamBStrong = isDark ? 'rgba(249,115,22,0.7)' : 'rgba(249,115,22,0.62)';
+  const customTeamA = appearance.action;
+  const customTeamB = appearance.surfaceText;
+  const teamASoft = isCustomTheme
+    ? `${customTeamA}66`
+    : (isDark ? 'rgba(59,130,246,0.4)' : 'rgba(59,130,246,0.32)');
+  const teamAStrong = isCustomTheme
+    ? `${customTeamA}AD`
+    : (isDark ? 'rgba(14,165,233,0.68)' : 'rgba(14,165,233,0.58)');
+  const teamBSoft = isCustomTheme
+    ? `${customTeamB}80`
+    : (isDark ? 'rgba(252, 163, 100, 0.7)' : 'rgba(248, 149, 78, 0.62)');
+  const teamBStrong = isCustomTheme
+    ? `${customTeamB}B8`
+    : (isDark ? 'rgba(249,115,22,0.7)' : 'rgba(249,115,22,0.62)');
 
   const scoreShadow = isDark ? 'rgba(0,0,0,0.55)' : 'rgba(0,0,0,0.28)';
   const zoneTextColor = isDark ? 'rgba(255,255,255,0.86)' : 'rgba(10,18,36,0.82)';
@@ -164,11 +176,11 @@ const MarcadorScreen: React.FC<MarcadorScreenProps> = ({ onBack }) => {
       <SafeAreaView style={[styles.container, { backgroundColor: bgColor, paddingTop: topInset }]}>
         <View style={[styles.header, { backgroundColor: headerBg, borderBottomColor: dividerColor, borderTopColor: dividerColor }]}> 
           <TouchableOpacity onPress={handleBack} style={[styles.backButton, { borderColor: dividerColor }]}>
-            <Text style={[styles.backText, { color: textColor }]}>← VOLTAR</Text>
+            <Text style={[styles.backText, { color: headerTextColor }]}>← VOLTAR</Text>
           </TouchableOpacity>
           <View style={styles.headerCenter}>
-            <Text style={[styles.headerChip, { color: isDark ? '#7fb2ff' : colors.secondaryDark }]}>MODO LIVRE</Text>
-            <Text style={[styles.headerTitle, { color: textColor }]}>MARCADOR DE PONTOS</Text>
+            <Text style={[styles.headerChip, { color: isCustomTheme ? headerTextColor : (isDark ? '#7fb2ff' : colors.secondaryDark) }]}>MODO LIVRE</Text>
+            <Text style={[styles.headerTitle, { color: headerTextColor }]}>MARCADOR DE PONTOS</Text>
           </View>
           <View style={styles.headerRightSpacer} />
         </View>
