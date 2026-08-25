@@ -1,8 +1,8 @@
 {
-  "buildCommand": "npm run build:web",
+  "buildCommand": "pnpm run build:web",
   "outputDirectory": "dist",
   "devCommand": "expo start --web",
-  "installCommand": "npm install",
+  "installCommand": "pnpm install",
   "redirects": [
     {
       "source": "/:path*",
