@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {
-  SafeAreaView,
   StatusBar,
   StyleSheet,
   Text,
@@ -8,9 +7,11 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../../shared/contexts/ThemeContext';
 import { useInterstitialAd } from '../../shared/components/AdMob/useInterstitialAd';
+import { getContrastTextColor } from '../../shared/constants/colors';
 
 type Winner = 'nos' | 'eles' | null;
 
@@ -26,24 +27,27 @@ const STORAGE_KEYS = {
 };
 
 const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
-  const { theme, colors } = useTheme();
+  const { effectiveTheme, colorTheme, appearance } = useTheme();
   const { width, height } = useWindowDimensions();
   const { showInterstitialAd } = useInterstitialAd();
 
-  const isDark = theme === 'dark';
+  const isDark = effectiveTheme === 'dark';
   const isPortrait = height >= width;
   const shortSide = Math.min(width, height);
   const isSmallDevice = shortSide < 360;
   const isCompactLandscape = !isPortrait && height < 430;
   const isUltraCompactLandscape = !isPortrait && height < 390;
-  const bgColor = isDark ? colors.background.dark : colors.background.light;
-  const cardColor = isDark ? colors.background.dark2 : colors.surface;
-  const textColor = isDark ? colors.text.dark : colors.text.light;
-  const primaryColor = isDark ? colors.primary : colors.secondaryDark;
-  const winnerBgColor = '#1f7a4c';
-  const loserBgColor = '#a93232';
-  const winnerBorderColor = '#27ae60';
-  const loserBorderColor = '#e74c3c';
+  const bgColor = appearance.background;
+  const cardColor = appearance.surface;
+  const textColor = appearance.text;
+  const cardTextColor = appearance.surfaceText;
+  const primaryColor = appearance.action;
+  const primaryTextColor = appearance.onAction;
+  const isCustomTheme = colorTheme !== 'default';
+  const winnerBgColor = isCustomTheme ? primaryColor : '#1f7a4c';
+  const loserBgColor = isCustomTheme ? appearance.surface : '#a93232';
+  const winnerBorderColor = isCustomTheme ? appearance.border : '#27ae60';
+  const loserBorderColor = isCustomTheme ? appearance.border : '#e74c3c';
   const scoreFontSize = isPortrait
     ? (isSmallDevice ? 64 : 74)
     : (isUltraCompactLandscape ? 34 : isCompactLandscape ? 40 : 46);
@@ -177,14 +181,16 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
 
   const getCardTextColor = (team: 'nos' | 'eles') => {
     if (!winner) {
-      return { label: textColor, score: primaryColor, round: textColor };
+      return { label: cardTextColor, score: primaryColor, round: cardTextColor };
     }
 
     if (winner === team) {
-      return { label: '#d4f5e4', score: '#ffffff', round: '#d4f5e4' };
+      const label = isCustomTheme ? getContrastTextColor(winnerBgColor) : '#d4f5e4';
+      return { label, score: label, round: label };
     }
 
-    return { label: '#ffd6d6', score: '#ffffff', round: '#ffd6d6' };
+    const label = isCustomTheme ? getContrastTextColor(loserBgColor) : '#ffd6d6';
+    return { label, score: label, round: label };
   };
 
   const nosTextColors = getCardTextColor('nos');
@@ -260,7 +266,7 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
               ]}
               onPress={() => setPontosRodada(value)}
             >
-              <Text style={[styles.actionText, { color: value === pontosRodada ? '#fff' : textColor, fontSize: actionFontSize }]}>
+              <Text style={[styles.actionText, { color: value === pontosRodada ? primaryTextColor : cardTextColor, fontSize: actionFontSize }]}>
                 {getRoundButtonLabel(value)}
               </Text>
             </TouchableOpacity>
@@ -277,7 +283,7 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
             ]}
             onPress={() => removeOnePoint('nos')}
           >
-            <Text style={[styles.actionText, { color: textColor, fontSize: actionFontSize }]}>NÓS -1</Text>
+            <Text style={[styles.actionText, { color: cardTextColor, fontSize: actionFontSize }]}>NÓS -1</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[
@@ -288,7 +294,7 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
             ]}
             onPress={() => removeOnePoint('eles')}
           >
-            <Text style={[styles.actionText, { color: textColor, fontSize: actionFontSize }]}>ELES -1</Text>
+            <Text style={[styles.actionText, { color: cardTextColor, fontSize: actionFontSize }]}>ELES -1</Text>
           </TouchableOpacity>
         </View>
 
@@ -298,11 +304,11 @@ const TrucoScreen: React.FC<TrucoScreenProps> = ({ onBack }) => {
               styles.actionButton,
               styles.halfButton,
               isPortrait && styles.actionButtonPortrait,
-              { backgroundColor: cardColor, borderColor: colors.danger },
+              { backgroundColor: cardColor, borderColor: appearance.danger },
             ]}
             onPress={resetGame}
           >
-            <Text style={[styles.actionText, { color: colors.danger, fontSize: actionFontSize }]}>Reiniciar partida</Text>
+            <Text style={[styles.actionText, { color: appearance.danger, fontSize: actionFontSize }]}>Reiniciar partida</Text>
           </TouchableOpacity>
         </View>
         </View>

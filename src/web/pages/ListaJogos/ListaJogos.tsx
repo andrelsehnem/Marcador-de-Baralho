@@ -59,6 +59,12 @@ const ListaJogos: React.FC<{ onNavigate: (page: string) => void }> = ({ onNaviga
               <div className="lista-card-title">Marcador Livre</div>
               <div className="lista-card-text">Equipe A x Equipe B com +1 e -1</div>
             </button>
+
+            <button className="lista-card card-purple" onClick={() => onNavigate('canastra')}>
+              <div className="lista-card-icon">🎲</div>
+              <div className="lista-card-title">Canastra</div>
+              <div className="lista-card-text">Marcador para 2 times com histórico editável</div>
+            </button>
           </div>
         </section>
 
@@ -123,8 +129,15 @@ const ListaJogos: React.FC<{ onNavigate: (page: string) => void }> = ({ onNaviga
               </p>
             </div>
 
+            <div className="lista-info-card info-canastra">
+              <h3>🎲 Canastra</h3>
+              <p>
+                Um jogo clássico de cartas para 2 times com pontuação customizável. Marque os pontos de cada time, edite o histórico conforme necessário e acompanhe a partida em tempo real com uma interface limpa e intuitiva.
+              </p>
+            </div>
+
             <p>
-              Ambos os marcadores foram desenvolvidos para serem intuitivos, rápidos e responsivos em qualquer dispositivo. Salve suas partidas automaticamente, mude de tema conforme sua preferência e aproveite uma experiência sem anúncios agressivos.
+              Todos os marcadores foram desenvolvidos para serem intuitivos, rápidos e responsivos em qualquer dispositivo. Salve suas partidas automaticamente, mude de tema conforme sua preferência e aproveite uma experiência sem anúncios agressivos.
             </p>
 
             <h2>

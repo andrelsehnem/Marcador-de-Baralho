@@ -137,6 +137,11 @@
   border-color: rgba(255, 255, 255, 0.17);
 }
 
+.card-purple {
+  border-color: rgba(168, 85, 247, 0.45);
+  background: linear-gradient(155deg, rgba(126, 34, 206, 0.35), rgba(126, 34, 206, 0.1));
+}
+
 .lista-card-icon {
   font-size: 26px;
   margin-bottom: 10px;
@@ -228,6 +233,10 @@
 
 .info-cacheta {
   border-left-color: #7d8dff;
+}
+
+.info-canastra {
+  border-left-color: #a855f7;
 }
 
 @media (max-width: 860px) {

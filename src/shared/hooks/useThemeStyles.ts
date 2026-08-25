@@ -1,9 +1,8 @@
 import { useMemo } from 'react';
-import { useTheme, ThemeType } from '../contexts/ThemeContext';
-import { COLORS } from '../constants/colors';
+import { useTheme } from '../contexts/ThemeContext';
 
 export const useThemeStyles = () => {
-  const { theme } = useTheme();
+  const { theme, colors } = useTheme();
 
   return useMemo(() => {
     const isDark = theme === 'dark';
@@ -11,25 +10,25 @@ export const useThemeStyles = () => {
     return {
       theme,
       isDark,
-      containerBg: isDark ? COLORS.background.dark : COLORS.background.light,
-      containerBg2: isDark ? COLORS.background.dark2 : COLORS.background.light2,
-      textPrimary: isDark ? COLORS.text.dark : COLORS.text.light,
-      textSecondary: isDark ? COLORS.text.dark : COLORS.text.light,
+      containerBg: isDark ? colors.background.dark : colors.background.light,
+      containerBg2: isDark ? colors.background.dark2 : colors.background.light2,
+      textPrimary: isDark ? colors.text.dark : colors.text.light,
+      textSecondary: isDark ? colors.text.dark : colors.text.light,
       buttonPrimary: {
-        bg: COLORS.primary,
+        bg: colors.primary,
         text: '#ffffff',
       },
       buttonPrimaryAlt: {
-        bg: COLORS.primaryLight,
+        bg: colors.primaryLight,
         text: '#ffffff',
       },
       buttonSecondary: {
-        bg: COLORS.secondary ,
-        text: isDark ? COLORS.text.dark : COLORS.text.primary,
-        border: COLORS.border,
+        bg: colors.secondary,
+        text: isDark ? colors.text.dark : colors.text.primary,
+        border: colors.border,
         borderWidth: 1,
       },
-      surface: isDark ? COLORS.background.dark2 : COLORS.surface,
+      surface: isDark ? colors.background.dark2 : colors.surface,
     };
-  }, [theme]);
+  }, [colors, theme]);
 };

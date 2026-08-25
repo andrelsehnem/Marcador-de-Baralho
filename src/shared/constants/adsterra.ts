@@ -4,6 +4,7 @@ export type AdsterraWebPage =
   | 'truco'
   | 'cacheta'
   | 'marcador'
+  | 'canastra'
   | 'como-jogar-truco'
   | 'como-jogar-cacheta';
 
@@ -224,6 +225,10 @@ export const ADSTERRA_PAGE_PLAN: Record<AdsterraWebPage, Record<AdsterraViewport
     webmobile: MOBILE_PLAN,
   },
   marcador: {
+    web: DESKTOP_GAME_PLAN,
+    webmobile: MOBILE_PLAN,
+  },
+  canastra: {
     web: DESKTOP_GAME_PLAN,
     webmobile: MOBILE_PLAN,
   },
